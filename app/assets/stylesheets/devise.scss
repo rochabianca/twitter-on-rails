@@ -1,13 +1,14 @@
-$primary: #808EDF;
-$secundary: #645BA1;
-$option: #79A5EA;
-$white: #fff;
+@import 'variables';
+@import 'alerts';
 
 .center {
   margin: 0 auto;
 }
 
 .devise {
+  background: url('/img/bg-login.jpg') no-repeat center;
+  background-attachment: fixed;
+  background-size: cover;
   background-color: $primary
 }
 
@@ -17,4 +18,35 @@ $white: #fff;
 
 .downpad {
   padding-bottom: 30px;
+}
+
+.space-to-center {
+  margin-top: 10%;
+  -webkit-box-shadow: -4px 3px 40px -4px rgba(77,77,77,0.63);
+  -moz-box-shadow: -4px 3px 40px -4px rgba(77,77,77,0.63);
+  box-shadow: -4px 3px 40px -4px rgba(77,77,77,0.63);
+}
+
+.space-field {
+  margin-bottom: 5px;
+}
+
+.links {
+  color: $gray;
+  font-size: 15px;
+  line-height: 1.4;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+hr.line {
+  background-color: $light-gray;
+  border-color: $light-gray;
+}
+
+h1 {
+  text-align: center;
 }

@@ -10,6 +10,19 @@
 
   <body class="devise">
   <div class="grid">
+    <div class="grid__column grid__column--12">
+      <% if notice %>
+        <p class="alert alert-success"><%= notice %></p>
+      <% end %>
+    </div>
+    
+    <div class="grid__column grid__column--12">
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    </div>
+
+
     <%= yield %>
     </div>
   </body>
