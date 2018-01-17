@@ -3,8 +3,43 @@ $secundary: #645BA1;
 $option: #79A5EA;
 
 $white: #fff;
+$black: #444;
 $gray: #848484;
 $light-gray: #eeeeee;
 
 $sucess: #0FCD8D;
 $danger: #FB7372;
+
+// Box-sizing
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+// Mixin de media-queries
+@mixin d($size) {
+	@if $size == l {
+		@media screen and (min-width: 1200px) {
+			@content;
+		}
+	}
+	@else if $size == m {
+		@media screen and (min-width: 768px) and (max-width: 1200px - 1) {
+			@content;
+		}
+	}
+	@else if $size == s {
+		@media screen and (max-width: 766px) {
+			@content;
+    }
+  }
+  @else if $size == sm {
+    @media screen and (max-width: 1200px) {
+			@content;
+    }
+  }
+  @else if $size == p {
+    @media screen and (min-width: 1024px) and (max-width: 1200px - 1) {
+			@content;
+		}
+  }
+}

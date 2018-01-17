@@ -1,29 +1,29 @@
 
-<div class="grid__column grid__column--3 center bg-white grid__column--leftpad grid__column--rightpad downpad space-to-center">
+<div class="grid__column grid__column--3 center bg-white downpad space-to-center mobile-grid" >
 <h1>Twinter</h1>
 <hr class="line">
-<h2>Log in</h2>
+<h2 class="left-margin">Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field space-field">
+  <div class="field space-field left-margin">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
-  <div class="field space-field">
+  <div class="field space-field left-margin">
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
 
   <% if devise_mapping.rememberable? -%>
-    <div class="field space-field">
+    <div class="field space-field left-margin">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
   <% end -%>
 
-  <div class="actions space-field">
-    <%= f.submit "Log in", :class => 'btn'  %>
+  <div class="actions space-field left-margin">
+    <%= f.submit "Log in", :class => 'btn btn--block'  %>
   </div>
 <% end %>
 

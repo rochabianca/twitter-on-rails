@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Devise</title>
     <%= csrf_meta_tags %>
 
@@ -12,13 +15,13 @@
   <div class="grid">
     <div class="grid__column grid__column--12">
       <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
+        <p class="alert alert-success animated slideInDown"><%= notice %></p>
       <% end %>
     </div>
     
     <div class="grid__column grid__column--12">
     <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
+      <p class="alert alert-danger animated slideInDown"><%= alert %></p>
     <% end %>
     </div>
 

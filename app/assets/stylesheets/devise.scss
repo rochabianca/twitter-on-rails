@@ -1,12 +1,13 @@
 @import 'variables';
 @import 'alerts';
+@import 'essencials';
 
 .center {
   margin: 0 auto;
 }
 
 .devise {
-  background: url('/img/bg-login.jpg') no-repeat center;
+  background: asset-url('bg-login.jpg')  no-repeat center;
   background-attachment: fixed;
   background-size: cover;
   background-color: $primary
@@ -25,10 +26,23 @@
   -webkit-box-shadow: -4px 3px 40px -4px rgba(77,77,77,0.63);
   -moz-box-shadow: -4px 3px 40px -4px rgba(77,77,77,0.63);
   box-shadow: -4px 3px 40px -4px rgba(77,77,77,0.63);
+
+  @include d(s) {
+    margin-top: 15%;
+  }
+}
+
+.left-margin {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .space-field {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+
+  @include d(s) {
+    margin-bottom: 20px;
+  }
 }
 
 .links {
@@ -43,10 +57,51 @@
 }
 
 hr.line {
-  background-color: $light-gray;
-  border-color: $light-gray;
+  border: none;
+  margin: 0px;
+  display: block;
+  height: 1px;
+  background: $light-gray;
 }
 
 h1 {
+  margin: 0px;
+  padding: 30px 0;
   text-align: center;
+  color: $black;
+}
+
+h2 {
+  margin: 0px;
+  padding: 30px 0;
+  color: $black;
+  @include d(sm) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+
+.mobile-grid {
+  max-width: 90%;
+  margin-bottom: 40px;
+
+  @include d(m) {
+    max-width: 80%;
+  }
+}
+
+.grid__column--3 {
+  @include d(p) {
+    width: 55%;
+  }
+}
+
+.input {
+  padding: 0 15px;
+  margin-bottom: 10px;
+
+  @include d(s) {
+    margin-bottom: 20px;
+  }
 }
