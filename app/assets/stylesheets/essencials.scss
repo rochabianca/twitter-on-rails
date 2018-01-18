@@ -14,3 +14,14 @@
   text-align: center;
   margin: 0 auto;
 }
+
+abbr[title] {
+  display: none;
+}
+
+.logo  {
+  display: block;
+  width: 30%;
+  text-align: center;
+  margin: 30px auto;
+}
