@@ -1,0 +1,14 @@
+@import 'variables';
+
+.button {
+  display: block;
+  background: $primary;
+  border: none;
+  padding: 15px 30px;
+  color: $white;
+  text-transform: uppercase;
+}
+
+.button--block {
+  width: 100%;
+}

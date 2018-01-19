@@ -1,0 +1,76 @@
+@import 'variables';
+
+// Micro
+
+.space--micro {
+  margin-top: $micro;
+  margin-bottom: $micro;
+}
+
+.space--micro-top {
+  margin-top: $micro;
+}
+
+.space--micro-bottom {
+  margin-bottom: $micro;
+}
+
+// Between
+
+.space--between {
+  margin-bottom: $between;
+  margin-top: $between;
+}
+
+.space--between-top {
+  margin-top: $between;
+}
+
+.space--between-bottom {
+  margin-bottom: $between;
+}
+
+// Minor
+
+.space--minor {
+  margin-top: $minor;
+  margin-bottom: $minor;
+}
+
+.space--minor-top {
+  margin-top: $minor;
+}
+
+.space--minor-bottom {
+  margin-bottom: $minor;
+}
+
+// Medium
+
+.space--medium {
+  margin-top: $medium;
+  margin-bottom: $medium;
+}
+
+.space--medium-top {
+  margin-top: $medium;
+}
+
+.space--medium-bottom {
+  margin-bottom: $medium;
+}
+
+// Major
+
+.space--major {
+  margin-top: $major;
+  margin-bottom: $major;
+}
+
+.space--major-top {
+  margin-top: $major;
+}
+
+.space--major-bottom {
+  margin-bottom: $major;
+}

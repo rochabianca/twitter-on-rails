@@ -12,11 +12,6 @@
   background-size: cover;
   background-color: $primary
 }
-
-.bg-white {
-  background-color: $white;
-}
-
 .downpad {
   padding-bottom: 30px;
 }
@@ -46,7 +41,7 @@
 }
 
 .links {
-  color: $gray;
+  color: $white;
   font-size: 15px;
   line-height: 1.4;
   text-decoration: none;
@@ -58,7 +53,6 @@
 
 hr.line {
   border: none;
-  margin: 0px 15px;
   display: block;
   height: 1px;
   background: $light-gray;
@@ -72,13 +66,12 @@ h1 {
 }
 
 h2 {
-  margin: 0px;
-  padding: 30px 0;
-  color: $black;
-  @include d(sm) {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 0 30px 0;
+  color: $white;
+  text-transform: uppercase;
+  font-size: 25px;
 }
 
 
@@ -97,11 +90,20 @@ h2 {
   }
 }
 
-.input {
-  padding: 0 15px;
-  margin-bottom: 10px;
+// .input {
+//   padding: 0 15px;
+//   margin-bottom: 10px;
 
-  @include d(s) {
-    margin-bottom: 20px;
-  }
+//   @include d(s) {
+//     margin-bottom: 20px;
+//   }
+// }
+
+label {
+  color: $white;
+  margin-bottom: $between;
+}
+
+.user_username, .user_email, .user_password, .user_password_confirmation {
+  margin-bottom: $between;
 }

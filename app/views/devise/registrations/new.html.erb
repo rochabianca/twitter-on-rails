@@ -1,20 +1,46 @@
-<div class="grid__column grid__column--3 center bg-white downpad space-to-center mobile-grid">
 
-<h2 class="center-this">Sign up</h2>
-<hr class="line bottom-divider">
+<div class="grid__column grid__column--3 bg--secundary downpad space-to-center mobile-grid left-margin flex--order-1 ">
+<%= image_tag "twinter-white.png", :class => "logo" %>
+  <hr class="line space--minor-bottom">
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
-  <%= f.input :email, autofocus: true, autocomplete: "email" %>
-  <%= f.input :username, autofocus: true, autocomplete: "username"%>
-  <%= f.input :password %>
-  <%= f.input :password_confirmation, autocomplete: "off" %>
+    <%= f.input :email, autofocus: true, autocomplete: "email", placeholder: "bruce_wayne@bat-mail.com", :class => "space--between-bottom space--micro-top" %>
 
-  <div class="field space-field left-margin divider-top">
-    <%= f.submit "Sign up", :class => 'btn btn--block' %>
+  
+    <%= f.input :username, autofocus: true, autocomplete: "username", placeholder: "NotBatman", :class => "space--minor-bottom label-form" %>
+    <%= f.input :password, placeholder: "Shh..." %>
+    <%= f.input :password_confirmation, autocomplete: "off" %>
+
+    <div class="field space-field divider-top">
+      <%= f.submit "Sign up", :class => 'button button--block space--minor-bottom' %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
   </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
 
-</div>
+  <div class="grid__column grid__column--2 bg--primary downpad space-to-center mobile-grid left-margin flex--order-0">
+
+  <h2>Sign up</h2>
+  <hr class="line space--minor-bottom">
+
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+    <%= f.input :email, autofocus: true, autocomplete: "email", placeholder: "bruce_wayne@bat-mail.com", :class => "space--between-bottom space--micro-top" %>
+
+  
+    <%= f.input :username, autofocus: true, autocomplete: "username", placeholder: "NotBatman", :class => "space--minor-bottom label-form" %>
+    <%= f.input :password, placeholder: "Shh..." %>
+    <%= f.input :password_confirmation, autocomplete: "off", placeholder: "It's a secret, okay?" %>
+
+    <div class="field space-field divider-top">
+      <%= f.submit "Sign up", :class => 'button button--block space--minor-bottom' %>
+    </div>
+  <% end %>
+
+  <%= render "devise/shared/links" %>
+
+  </div>

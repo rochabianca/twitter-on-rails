@@ -12,7 +12,7 @@
   </head>
 
   <body class="devise">
-  <div class="grid">
+  <div class="grid center">
     <div class="grid__column grid__column--12">
       <% if notice %>
         <p class="alert alert-success animated slideInDown"><%= notice %></p>
@@ -20,13 +20,16 @@
     </div>
     
     <div class="grid__column grid__column--12">
-    <% if alert %>
-      <p class="alert alert-danger animated slideInDown"><%= alert %></p>
-    <% end %>
+      <% if alert %>
+        <p class="alert alert-danger animated slideInDown"><%= alert %></p>
+      <% end %>
     </div>
+  
+  </div>
 
-
+  <div class="grid center flex flex--center flex--wrap">
     <%= yield %>
-    </div>
+  </div>
+
   </body>
 </html>

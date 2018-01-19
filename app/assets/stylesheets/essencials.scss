@@ -1,3 +1,5 @@
+@import 'variables';
+
 .top-divider {
   padding-top: 30px;
 }
@@ -23,5 +25,14 @@ abbr[title] {
   display: block;
   width: 30%;
   text-align: center;
-  margin: 30px auto;
+  margin: 0 auto;
+  padding: 30px 0;
+
+  @include d(s) {
+    width: 35%;
+  }
+}
+
+.label-form {
+  color: $white;
 }

@@ -1,29 +1,21 @@
 
-<div class="grid__column grid__column--3 center bg-white downpad space-to-center mobile-grid" >
-<%= image_tag "twinter-black.png", :class => "logo" %>
+<div class="grid__column grid__column--3 center bg--primary downpad space-to-center mobile-grid left-margin bg--primary__minor-opacity" >
+<%= image_tag "twinter-white.png", :class => "logo" %>
 <hr class="line">
-<h2 class="left-margin">Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field space-field left-margin">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= f.input :email, autofocus: true, autocomplete: "email", placeholder: "elsa@twinter.com", :class => "space--between-bottom space--micro-top"  %>
 
-  <div class="field space-field left-margin">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+    <%= f.input :password, autocomplete: "off", placeholder: "******", :class => "space--micro-top" %>
 
   <% if devise_mapping.rememberable? -%>
-    <div class="field space-field left-margin">
+   
       <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
+      <%= f.label :remember_me, :class => "color--white space--minor" %>
   <% end -%>
 
-  <div class="actions space-field left-margin">
-    <%= f.submit "Log in", :class => 'btn btn--block'  %>
+  <div class="actions space-field">
+    <%= f.submit "Log in", :class => 'button button--block space--minor-bottom'  %>
   </div>
 <% end %>
 

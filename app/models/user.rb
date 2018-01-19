@@ -2,6 +2,8 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   has_many :tweets
+  has_many :followers, :class_name => "Follow", :foreign_key => "user_id"
+  has_many :following, :class_name => "Follow", :foreign_key => "follower_id"
 
   validates :username, presence: :true, uniqueness: { case_sensitive: false }
 

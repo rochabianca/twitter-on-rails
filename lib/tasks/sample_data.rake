@@ -17,18 +17,37 @@ end
 
 
 namespace :sample_data do
+  desc "This task make users follow randow users"
+  task followers: :environment do
+    100.times do |i|
+      user = User.connection.select_values(User.select("id").to_sql)
+      # puts user[1]
+      id_user = 1 + rand(98)
+      randow_user = user[id_user]
+      
+      Follow.create!(
+        user_id: user[i],
+        follower_id: randow_user
+      )
+      puts "User #{i} Followed user #{randow_user}"
+    end
+  end
+end
+
+
+
+namespace :sample_data do
   desc "This task create new tweets"
   task tweets: :environment do
     100.times do |f|
-      $i = 1;
-      until $i == 100 do
-        Tweet.create!(
+      user = User.connection.select_values(User.select("id").to_sql)
+
+      Tweet.create!(
         :content => Faker::WorldOfWarcraft.quote,
-        :user_id => $i
-        )
-        i=+1;
-        puts "tweet from user #{$i} created"
-      end
+        :user_id => user[f]
+      )
+
+      puts "tweet from user #{user[f]} created"
       
     end
   end
