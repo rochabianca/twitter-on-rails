@@ -7,20 +7,22 @@
 }
 
 .devise {
-  background: asset-url('bg-login.jpg')  no-repeat center;
+  background: asset-url('bg-login-4.png')  center;
+  max-width: 100%;
   background-attachment: fixed;
-  background-size: cover;
+  //background-size: cover;
   background-color: $primary
 }
+
 .downpad {
   padding-bottom: 30px;
 }
 
 .space-to-center {
   margin-top: 10%;
-  -webkit-box-shadow: -4px 3px 40px -4px rgba(77,77,77,0.63);
-  -moz-box-shadow: -4px 3px 40px -4px rgba(77,77,77,0.63);
-  box-shadow: -4px 3px 40px -4px rgba(77,77,77,0.63);
+  // -webkit-box-shadow: -4px 3px 40px -4px rgba(77,77,77,0.63);
+  // -moz-box-shadow: -4px 3px 40px -4px rgba(77,77,77,0.63);
+  // box-shadow: -4px 3px 40px -4px rgba(77,77,77,0.63);
 
   @include d(s) {
     margin-top: 15%;
@@ -77,7 +79,6 @@ h2 {
 
 .mobile-grid {
   max-width: 90%;
-  margin-bottom: 40px;
 
   @include d(m) {
     max-width: 80%;
@@ -90,15 +91,6 @@ h2 {
   }
 }
 
-// .input {
-//   padding: 0 15px;
-//   margin-bottom: 10px;
-
-//   @include d(s) {
-//     margin-bottom: 20px;
-//   }
-// }
-
 label {
   color: $white;
   margin-bottom: $between;
@@ -106,4 +98,18 @@ label {
 
 .user_username, .user_email, .user_password, .user_password_confirmation {
   margin-bottom: $between;
+}
+
+.image-caroulsel  {
+  max-width: 100%;
+  width: auto !important;
+  margin: 0 auto;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+  background: $secundary;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background: $white;
 }

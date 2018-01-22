@@ -1,7 +1,9 @@
+@import 'variables';
+
 .bg--primary {
-  background-color: rgba(43, 44, 78, 0.7);
+  background-color: $secundary //rgba(43, 44, 78, 0.9);
 }
 
 .bg--secundary {
-  background-color: rgba(113, 173, 250, 0.9);
+  background-color: $primary//rgba(113, 173, 250, 0.9);
 }

@@ -1,0 +1,18 @@
+@import 'variables';
+
+.link {
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.link--secundary {
+  color: $secundary;
+}
+
+.link--white {
+  color: $white;
+}

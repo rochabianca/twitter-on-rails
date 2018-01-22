@@ -1,0 +1,76 @@
+@import 'variables';
+
+// Micro
+
+.divider--micro {
+  padding-top: $micro;
+  padding-bottom: $micro;
+}
+
+.divider--micro-top {
+  padding-top: $micro;
+}
+
+.divider--micro-bottom {
+  padding-bottom: $micro;
+}
+
+// Between
+
+.divider--between {
+  padding-bottom: $between;
+  padding-top: $between;
+}
+
+.divider--between-top {
+  padding-top: $between;
+}
+
+.divider--between-bottom {
+  padding-bottom: $between;
+}
+
+// Minor
+
+.divider--minor {
+  padding-top: $minor;
+  padding-bottom: $minor;
+}
+
+.divider--minor-top {
+  padding-top: $minor;
+}
+
+.divider--minor-bottom {
+  padding-bottom: $minor;
+}
+
+// Medium
+
+.divider--medium {
+  padding-top: $medium;
+  padding-bottom: $medium;
+}
+
+.divider--medium-top {
+  padding-top: $medium;
+}
+
+.divider--medium-bottom {
+  padding-bottom: $medium;
+}
+
+// Major
+
+.divider--major {
+  padding-top: $major;
+  padding-bottom: $major;
+}
+
+.divider--major-top {
+  padding-top: $major;
+}
+
+.divider--major-bottom {
+  padding-bottom: $major;
+}

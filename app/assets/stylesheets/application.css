@@ -12,6 +12,8 @@
  *
  *= require variables
  *= require naked.min
+ *= require owl.carousel.min
+ *= require owl.theme.default.min
  *= require_tree .
  *= require_self
  */

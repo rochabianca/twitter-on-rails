@@ -23,13 +23,13 @@ abbr[title] {
 
 .logo  {
   display: block;
-  width: 30%;
+  width: 90px;
   text-align: center;
   margin: 0 auto;
   padding: 30px 0;
 
   @include d(s) {
-    width: 35%;
+    width: 100px;
   }
 }
 
