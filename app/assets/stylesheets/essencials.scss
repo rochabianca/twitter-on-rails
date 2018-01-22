@@ -36,3 +36,12 @@ abbr[title] {
 .label-form {
   color: $white;
 }
+
+.only-desktop {
+  @include d(m) {
+    display: none;
+  }
+  @include d(s) {
+    display: none;
+  }
+}

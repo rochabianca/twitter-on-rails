@@ -1,52 +1,52 @@
 
-<div class="grid__column grid__column--3 bg--secundary downpad space-to-center left-margin flex--order-1">
-  <%= image_tag "twinter-white.png", :class => "logo" %>
-  <hr class="line space--major-bottom">
+  <div class="grid__column grid__column--3 bg--secundary downpad space-to-center left-margin flex--order-1">
+    <%= image_tag "twinter-white.png", :class => "logo" %>
+    <hr class="line space--major-bottom">
 
-  <div class="owl-carousel owl-theme">
-    <div class="item">
-      <%= image_tag "snowflake.png", :class => "image-caroulsel" %>
-      <p class="color--white text--center">Inform quickly about snow accidents to your friends and increase the safety of your journey </p>
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <%= image_tag "snowflake.png", :class => "image-caroulsel" %>
+        <p class="color--white text--center">Inform quickly about snow accidents to your friends and increase the safety of your journey </p>
+      </div>
+
+      <div class="item">
+        <%= image_tag "snowflake.png", :class => "image-caroulsel" %>
+        <p class="color--white text--center">Inform quickly about snow accidents to your friends and increase the safety of your journey </p>
+      </div>
+      
+      <div class="item">
+        <%= image_tag "snowflake.png", :class => "image-caroulsel" %>
+        <p class="color--white text--center">Inform quickly about snow accidents to your friends and increase the safety of your journey </p>
+      </div>
     </div>
 
-     <div class="item">
-      <%= image_tag "snowflake.png", :class => "image-caroulsel" %>
-      <p class="color--white text--center">Inform quickly about snow accidents to your friends and increase the safety of your journey </p>
+    <hr class="line space--medium-bottom space--medium-top">
+    <div>
+      <p class="color--white text--center text--small divider--minor-top">Twinter 2018 &copy all rights reserved. Developed by <a href="https://github.com/rochabianca" target="_blank" class="link link--secundary">Bianca Rocha</a></p>
     </div>
     
-     <div class="item">
-      <%= image_tag "snowflake.png", :class => "image-caroulsel" %>
-      <p class="color--white text--center">Inform quickly about snow accidents to your friends and increase the safety of your journey </p>
-    </div>
   </div>
-
-  <hr class="line space--medium-bottom space--medium-top">
-  <div>
-    <p class="color--white text--center text--small divider--minor-top">Twinter 2018 &copy all rights reserved. Developed by <a href="https://github.com/rochabianca" target="_blank" class="link link--secundary">Bianca Rocha</a></p>
-  </div>
-  
-</div>
 
 
   <div class="grid__column grid__column--3 bg--primary downpad space-to-center left-margin flex--order-0">
 
-  <h2>Sign up</h2>
-  <hr class="line space--minor-bottom">
+    <h2>Sign up</h2>
+    <hr class="line space--minor-bottom">
 
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 
-    <%= f.input :email, autofocus: true, autocomplete: "email", placeholder: "bruce_wayne@bat-mail.com", :class => "space--between-bottom space--micro-top" %>
+      <%= f.input :email, autofocus: true, autocomplete: "email", placeholder: "bruce_wayne@bat-mail.com", :class => "space--between-bottom space--micro-top" %>
 
-  
-    <%= f.input :username, autofocus: true, autocomplete: "username", placeholder: "NotBatman", :class => "space--minor-bottom label-form" %>
-    <%= f.input :password, placeholder: "Shh..." %>
-    <%= f.input :password_confirmation, autocomplete: "off", placeholder: "It's a secret, okay?" %>
+    
+      <%= f.input :username, autofocus: true, autocomplete: "username", placeholder: "NotBatman", :class => "space--minor-bottom label-form" %>
+      <%= f.input :password, placeholder: "Shh..." %>
+      <%= f.input :password_confirmation, autocomplete: "off", placeholder: "It's a secret, okay?" %>
 
-    <div class="field space-field divider-top">
-      <%= f.submit "Sign up", :class => 'button button--block space--minor-bottom' %>
-    </div>
-  <% end %>
+      <div class="field space-field divider-top">
+        <%= f.submit "Sign up", :class => 'button button--block space--minor-bottom' %>
+      </div>
+    <% end %>
 
-  <%= render "devise/shared/links" %>
+    <%= render "devise/shared/links" %>
 
   </div>

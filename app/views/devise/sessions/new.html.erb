@@ -4,9 +4,9 @@
 <hr class="line">
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <%= f.input :email, autofocus: true, autocomplete: "email", placeholder: "elsa@twinter.com", :class => "space--between-bottom space--micro-top"  %>
-
-    <%= f.input :password, autocomplete: "off", placeholder: "******", :class => "space--micro-top" %>
+    <%= f.input :login, autofocus: true, autocomplete: "email", placeholder: "elsa@twinter.com", :class => "space--between-bottom space--micro-top"  %>
+    
+    <%= f.input :password, autocomplete: "off", placeholder: "******", :class => "space--micro-top space--between-bottom" %>
 
   <% if devise_mapping.rememberable? -%>
    

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Application</title>
     <%= csrf_meta_tags %>
 
@@ -9,7 +12,7 @@
   </head>
 
   <body>
-  <div class="grid">
+  <div class="grid bg--primary">
     <div class="grid__column grid__column--12">
       <% if notice %>
         <p class="alert alert-success"><%= notice %></p>
@@ -22,7 +25,23 @@
     <% end %>
     </div>
 
-    <%= link_to "log out", destroy_user_session_path, method: :delete %>
+    <header class="container">
+      <div class=" header">
+        <div>
+            <%= image_tag "twinter-white.png", :class => "logo header--logo" %>
+        </div>
+
+        <ul>
+          <li>Home</li>
+          <li>Notifications</li>
+          <li>Profile</li>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => "link link--white" %></li>
+        </ul>
+      </div>
+    </header>
+  </div>
+
+    
     <%= yield %>
   </body>
 </html>

@@ -1,0 +1,28 @@
+@import 'variables';
+
+.header, .header ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header {
+  background: $secundary;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header ul {
+  flex-direction: row;
+  margin: 0px;
+}
+
+.header ul li {
+  display: inline-block;
+  padding: 15px 15px;
+  color: $white;
+}
+
+.header--logo {
+  width: 120px;
+  padding: 15px;
+}

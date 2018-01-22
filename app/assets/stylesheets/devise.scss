@@ -113,3 +113,16 @@ label {
 .owl-theme .owl-dots .owl-dot span {
   background: $white;
 }
+
+.owl-carousel,.owl-stage-outer,.owl-stage,.owl-item,.owl-item .item,.owl-wrapper{transition: none;} .owl-carousel:after,.owl-carousel:before,.owl-stage-outer:after,.owl-stage-outer:after,.owl-stage:after,.owl-stage:before,.owl-item:after,.owl-item:before,.owl-item .item:after,.owl-item .item:before{transition: none;}
+
+.flex--sign-up {
+  display: flex;
+
+  @include d(m) {
+    display: inline-block;
+  }
+  @include d(s) {
+    display: inline-block;
+  }
+}
