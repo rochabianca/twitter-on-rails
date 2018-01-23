@@ -1,10 +1,27 @@
-<div class="grid space--major-top ">
-  <div class="container flex flex--wrap">
-    <div class="grid__column grid__column--9 bg--secundary">
-        <h1>Hello!</h1>
+<div class="grid space--medium-top ">
+  <div class="container flex flex--wrap flex--flex-start">
+    <div class="grid__column grid__column--8 bg--white">
+      <h1>Hello!</h1>
+      
+      <%= user = current_user.id  %>
+      <%= follow = Follow.connection.select_values("Select follower_id from Follows where user_id = #{user}")%>
+
+      <% follow.each %>
+      <%= tweet = Tweet.connection.select_values("Select content from Tweets where user_id IN (#{follow[2]})")%>
     </div>
-    <div class="grid__column grid__column--3 bg--primary only-desktop">
-      <h2>There</h2>
+
+    <div class="grid__column grid__column--3 bg--white only-desktop left-margin space--medium-left">
+      <h2 class="home--title">Trending</h2>
+      <hr class="line space--minor-bottom">
+
+      <ul class="home--thrending space--medium-bottom">
+        <% 10.times do |i| %>
+          <li><%= Faker::Zelda.item %></li>
+        <% end %>
+      </ul>
+
+      <hr class="line space--minor-bottom">
+      <p class="color--black text--center text--small divider--minor-bottom">Twinter 2018 &copy all rights reserved.</p>
     </div>
     
   </div>

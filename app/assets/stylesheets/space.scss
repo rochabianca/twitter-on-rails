@@ -15,6 +15,14 @@
   margin-bottom: $micro;
 }
 
+.space--micro-left {
+  margin-left: $micro;
+}
+
+.space--micro-right {
+  margin-right: $micro;
+}
+
 // Between
 
 .space--between {
@@ -28,6 +36,14 @@
 
 .space--between-bottom {
   margin-bottom: $between;
+}
+
+.space--between-left {
+  margin-left: $between;
+}
+
+.space--between-right {
+  margin-right: $between;
 }
 
 // Minor
@@ -45,6 +61,14 @@
   margin-bottom: $minor;
 }
 
+.space--minor-left {
+  margin-left: $minor;
+}
+
+.space--minor-right {
+  margin-right: $minor;
+}
+
 // Medium
 
 .space--medium {
@@ -60,6 +84,14 @@
   margin-bottom: $medium;
 }
 
+.space--medium-left {
+  margin-left: $medium;
+}
+
+.space--medium-right {
+  margin-right: $medium;
+}
+
 // Major
 
 .space--major {
@@ -73,4 +105,12 @@
 
 .space--major-bottom {
   margin-bottom: $major;
+}
+
+.space--major-left {
+  margin-left: $major;
+}
+
+.space--major-right {
+  margin-right: $major;
 }

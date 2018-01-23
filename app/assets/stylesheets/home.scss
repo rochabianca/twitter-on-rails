@@ -1,3 +1,36 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'variables';
+
+.home--title {
+  color: $black;
+  font-size: $bigger;
+  padding-bottom: $between;
+  padding-top: $medium;
+  text-align: right;
+
+  // &::after {
+  //   content: '';
+  //   display: block;
+  //   height: 1px;
+  //   margin-top: 8px;
+  //   background: $black;
+  // }
+}
+
+.home--thrending {
+  margin: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0px;
+}
+
+.home--thrending li {
+  list-style: none;
+  padding: $between;
+  color: $primary;
+  font-size: $big;
+  
+}

@@ -100,22 +100,6 @@ label {
   margin-bottom: $between;
 }
 
-.image-caroulsel  {
-  max-width: 100%;
-  width: auto !important;
-  margin: 0 auto;
-}
-
-.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
-  background: $secundary;
-}
-
-.owl-theme .owl-dots .owl-dot span {
-  background: $white;
-}
-
-.owl-carousel,.owl-stage-outer,.owl-stage,.owl-item,.owl-item .item,.owl-wrapper{transition: none;} .owl-carousel:after,.owl-carousel:before,.owl-stage-outer:after,.owl-stage-outer:after,.owl-stage:after,.owl-stage:before,.owl-item:after,.owl-item:before,.owl-item .item:after,.owl-item .item:before{transition: none;}
-
 .flex--sign-up {
   display: flex;
 
