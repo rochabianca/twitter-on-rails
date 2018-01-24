@@ -3,8 +3,11 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   has_many :tweets
-  has_many :followers, class_name: 'Follow', foreign_key: 'user_id'
-  has_many :following, class_name: 'Follow', foreign_key: 'follower_id'
+  has_many :followers_links, class_name: 'Follow', source: :follower
+  has_many :following_links, class_name: 'Follow', source: :user
+  
+  has_many :followers, through: :followers_links, class_name: 'User'
+  has_many :following, through: :following_links, class_name: 'User', source: :user
 
   attr_accessor :login
 

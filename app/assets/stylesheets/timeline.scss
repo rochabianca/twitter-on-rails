@@ -1,0 +1,34 @@
+@import 'variables';
+
+.timeline, .timeline ul {
+  padding: 0px;
+}
+
+.timeline li {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.timeline--list {
+  
+  padding: 15px 30px;
+}
+
+.timeline--profile {
+  max-width: 100%;
+  width: 50px;
+  border-radius: 25px;
+}
+
+.timeline--username {
+  font-size: $medium-text;
+  padding-bottom: $micro !important;
+  color: $black;
+  font-weight: bold;
+}
+
+.timeline--tweet {
+  font-size: $medium-text;
+  color: $black;
+}

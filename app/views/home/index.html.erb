@@ -1,13 +1,21 @@
-<div class="grid space--medium-top ">
+<div class="grid space--minor-top ">
   <div class="container flex flex--wrap flex--flex-start">
-    <div class="grid__column grid__column--8 bg--white">
+    <div class="grid__column grid__column--8 bg--white left-margin">
       <h1>Hello!</h1>
-      
-      <%= user = current_user.id  %>
-      <%= follow = Follow.connection.select_values("Select follower_id from Follows where user_id = #{user}")%>
-
-      <% follow.each %>
-      <%= tweet = Tweet.connection.select_values("Select content from Tweets where user_id IN (#{follow[2]})")%>
+      <ul class="timeline">
+      <% @tweets.each do |tweet| %>
+        <li class="timeline--list">
+          <ul class="flex">
+            <li><%= image_tag "profile.jpg", :class => "timeline--profile space--minor-right" %></li>
+            <div>
+            <li class="timeline--username">@<%= tweet.user.username %></li>
+            <li class="timeline--tweet"><%= tweet.content %></li>
+            <div>
+          </ul>
+        </li>
+         <hr class="line space--minor-bottom">
+      <% end %>
+      </ul>
     </div>
 
     <div class="grid__column grid__column--3 bg--white only-desktop left-margin space--medium-left">
@@ -20,7 +28,7 @@
         <% end %>
       </ul>
 
-      <hr class="line space--minor-bottom">
+     <hr class="line space--minor-bottom">
       <p class="color--black text--center text--small divider--minor-bottom">Twinter 2018 &copy all rights reserved.</p>
     </div>
     
