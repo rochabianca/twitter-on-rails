@@ -1,5 +1,57 @@
 <div class="grid space--minor-top ">
   <div class="container flex flex--wrap flex--flex-start">
+
+  <div class="grid__column grid__column--3 only-desktop space--minor-right">
+
+    <div class="profile-card space--minor-bottom bg--option divider--minor-bottom divider--medium-top flex--center text--center left-margin">
+      <%= image_tag "profile.jpg", :class => "profile-card--image" %>
+
+      <div class="profile-card--user">
+      <h3 class="profile-card--username"> <%= @user_username %> </h3>
+      <p class="profile-card--quote"> <%= Faker::TheFreshPrinceOfBelAir.quote %> </p>
+      <% @t %>
+
+      <ul>
+        <li>
+          <ul>
+            <li>Following</li>
+            <li><%=  @user_following %></li>
+          </ul>
+        </li>
+
+        <li>
+          <ul>
+            <li></li>
+            <li></li>
+          </ul>
+        </li>
+      </ul>
+      
+      
+
+
+
+      </div>
+    </div>
+
+
+
+    <div class="bg--white left-margin">
+      <h2 class="home--title">Trending</h2>
+      <hr class="line space--minor-bottom">
+
+      <ul class="home--thrending space--medium-bottom">
+        <% 10.times do |i| %>
+          <li><%= Faker::Zelda.item %></li>
+        <% end %>
+      </ul>
+
+     <hr class="line space--minor-bottom">
+      <p class="color--black text--center text--small divider--minor-bottom">Twinter 2018 &copy all rights reserved.</p>
+    </div>
+    </div>
+
+
     <div class="grid__column grid__column--8 bg--white left-margin">
       <h1>Hello!</h1>
       <ul class="timeline">
@@ -16,20 +68,6 @@
          <hr class="line space--minor-bottom">
       <% end %>
       </ul>
-    </div>
-
-    <div class="grid__column grid__column--3 bg--white only-desktop left-margin space--medium-left">
-      <h2 class="home--title">Trending</h2>
-      <hr class="line space--minor-bottom">
-
-      <ul class="home--thrending space--medium-bottom">
-        <% 10.times do |i| %>
-          <li><%= Faker::Zelda.item %></li>
-        <% end %>
-      </ul>
-
-     <hr class="line space--minor-bottom">
-      <p class="color--black text--center text--small divider--minor-bottom">Twinter 2018 &copy all rights reserved.</p>
     </div>
     
   </div>

@@ -1,0 +1,20 @@
+@import 'variables';
+
+.profile-card--image {
+  max-width: 100%;
+  width: 70px;
+  border-radius: 35px;
+  margin: 0 auto;
+}
+
+.profile-card--username {
+  margin: 0px;
+  padding: 0px;
+  color: $white;
+  margin: $between auto;
+}
+
+.profile-card--quote {
+  color: $light-gray;
+  font-size: $medium-text;
+}
