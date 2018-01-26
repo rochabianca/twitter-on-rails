@@ -3,10 +3,11 @@ class HomeController < ApplicationController
 
   def index
     @tweets =  Tweet.where(user_id: @following.pluck(:follower_id)).includes(:user).order(:created_at).reverse_order
-    @follow_user = User.where(id: @following.pluck(:follower_id))  
+    @follow_user = User.where(id: @following.pluck(:follower_id))#@following_user = User.where(id: @followers.pluck(:user_id))
+
     @user_username = current_user.username
     @user_following = @follow_user.count
-    current_user.tweets.destroy_all
+    @user_followers = @follow_user.count
     # Tweet.
     # where(user_id: current_user).destroy_all
   end

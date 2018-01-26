@@ -3,36 +3,32 @@
 
   <div class="grid__column grid__column--3 only-desktop space--minor-right">
 
-    <div class="profile-card space--minor-bottom bg--option divider--minor-bottom divider--medium-top flex--center text--center left-margin">
+    <div class="profile-card bg--option divider--minor-bottom divider--medium-top flex--center text--center left-margin">
       <%= image_tag "profile.jpg", :class => "profile-card--image" %>
 
       <div class="profile-card--user">
-      <h3 class="profile-card--username"> <%= @user_username %> </h3>
-      <p class="profile-card--quote"> <%= Faker::TheFreshPrinceOfBelAir.quote %> </p>
-      <% @t %>
-
-      <ul>
-        <li>
-          <ul>
-            <li>Following</li>
-            <li><%=  @user_following %></li>
-          </ul>
-        </li>
-
-        <li>
-          <ul>
-            <li></li>
-            <li></li>
-          </ul>
-        </li>
-      </ul>
-      
-      
-
-
-
+        <h3 class="profile-card--username"> <%= @user_username %> </h3>
+        <p class="profile-card--quote"> <%= Faker::TheFreshPrinceOfBelAir.quote %> </p>
       </div>
+
     </div>
+
+      <div class="flex profile-card--followers bg--white space--minor-bottom profile-card--border">
+        <ul>
+          <li>Tweets</li>
+          <li><%=  current_user.tweets.count %></li>
+        </ul>
+
+        <ul>
+          <li>Following</li>
+          <li><%= @user_following %></li>
+        </ul>
+        <ul>
+
+          <li>Followers</li>
+          <li><%=  @user_following %></li>
+        </ul>
+      </div>
 
 
 

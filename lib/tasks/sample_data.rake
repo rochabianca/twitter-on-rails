@@ -43,7 +43,7 @@ namespace :sample_data do
       user = User.connection.select_values(User.select("id").to_sql)
 
       Tweet.create!(
-        :content => Faker::TheFreshPrinceOfBelAir.quote, #Faker::WorldOfWarcraft.quote,
+        :content => Faker::WorldOfWarcraft.quote,
         :user_id => user[f]
       )
 

@@ -17,4 +17,45 @@
 .profile-card--quote {
   color: $light-gray;
   font-size: $medium-text;
+  margin: 0px;
 }
+
+.profile-card--followers {
+  justify-content: space-around;
+  background-color: $white;
+}
+
+.profile-card--followers ul {
+  list-style: none;
+  color: $black;
+  font-size: $medium-text;
+  margin: 0px;
+  padding: 0px;
+
+  padding: $between 0;
+}
+
+.profile-card--followers li {
+  text-align: center;
+  font-weight: bold;
+}
+
+.profile-card--followers li:first-child {
+  font-weight: normal;
+  color: $option-font;
+  padding-bottom: $between;
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: $light-gray;
+    width: 95px;
+    margin-top: $between;
+  }
+}
+
+.profile-card--border {
+  border-bottom: 2px solid $black;
+  border-top: 2px solid $black;
+}
+
