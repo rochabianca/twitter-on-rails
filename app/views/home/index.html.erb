@@ -4,7 +4,7 @@
   <div class="grid__column grid__column--3 only-desktop space--minor-right">
 
     <div class="profile-card bg--option divider--minor-bottom divider--medium-top flex--center text--center left-margin">
-      <%= image_tag "profile.jpg", :class => "profile-card--image" %>
+      <%= image_tag @rand_profile, :class => "profile-card--image" %>
 
       <div class="profile-card--user">
         <h3 class="profile-card--username"> <%= @user_username %> </h3>
@@ -26,7 +26,7 @@
         <ul>
 
           <li>Followers</li>
-          <li><%=  @user_following %></li>
+          <li><%=  @user_followers %></li>
         </ul>
       </div>
 
@@ -49,19 +49,29 @@
 
 
     <div class="grid__column grid__column--8 bg--white left-margin">
-      <h1>Hello!</h1>
+      <div class="new-tweet">
+        <div>
+          <%= image_tag @rand_profile, class: "timeline--profile space--minor-right" %>
+        </div>
+        <textarea id="new-tweet" cols="8" rows="3"></textarea>
+        </div>
+        <div class="new-tweet--button">
+          <p>Caracteres: <span class="caracteres"></span></p>
+          <button class="button">Tweet</button>
+        </div>
+
       <ul class="timeline">
       <% @tweets.each do |tweet| %>
         <li class="timeline--list">
+        <hr class="line space--minor-bottom">
           <ul class="flex">
-            <li><%= image_tag "profile.jpg", :class => "timeline--profile space--minor-right" %></li>
+            <li><%= image_tag "profile-#{rand(3)}.png", :class => "timeline--profile space--minor-right" %></li>
             <div>
             <li class="timeline--username">@<%= tweet.user.username %></li>
             <li class="timeline--tweet"><%= tweet.content %></li>
             <div>
           </ul>
         </li>
-         <hr class="line space--minor-bottom">
       <% end %>
       </ul>
     </div>

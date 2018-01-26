@@ -14,5 +14,6 @@
 //= require turbolinks
 //= require jquery-3.3.1.min
 //= require owl.carousel.min
+//= require new-tweet.js
 //= require carousel
 //= require_tree .

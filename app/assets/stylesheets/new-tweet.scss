@@ -1,0 +1,39 @@
+@import 'variables';
+
+.new-tweet {
+  padding-top: $between;
+  display: flex;
+}
+
+.new-tweet textarea {
+  width: 100%;
+  border: 2px solid $option;
+  border-radius: 5px;
+  height: 70px;
+  padding: $micro;
+  margin: 0px;
+}
+
+.new-tweet textarea:focus, new-tweet textarea:hover {
+  border-color: $option-font;
+}
+
+.new-tweet--button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-tweet--button p {
+  margin-left: 65px;
+  color: $gray;
+}
+
+.new-tweet--button button {
+  display: inline-block;
+  margin: 0px;
+  margin-top: $between;
+  background: $option-font;
+  border-radius: $micro;
+  padding: $between $minor;
+}
