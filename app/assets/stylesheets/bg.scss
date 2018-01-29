@@ -9,7 +9,7 @@
 }
 
 .bg--home {
-  background: asset-url('bg-home.png')  center;
+  background: asset-url('bg-home-2.png')  center;
   max-width: 100%;
   background-attachment: fixed;
   background-color: $primary
@@ -21,4 +21,8 @@
 
 .bg--option {
   background-color: $option;
+}
+
+.bg--option-font {
+  background-color: $option-font;
 }

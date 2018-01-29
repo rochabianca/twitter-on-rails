@@ -38,24 +38,23 @@
 .profile-card--followers li {
   text-align: center;
   font-weight: bold;
+  padding: 0px 20px;
+  border-right: 1px solid $light-gray;
 }
 
 .profile-card--followers li:first-child {
   font-weight: normal;
   color: $option-font;
   padding-bottom: $between;
-  &::after {
-    content: '';
-    display: block;
-    height: 1px;
-    background: $light-gray;
-    width: 95px;
-    margin-top: $between;
-  }
+  font-size: $medium-text;
+}
+
+.profile-card--followers ul:last-child li {
+  border-right: 0px;
 }
 
 .profile-card--border {
-  border-bottom: 2px solid $black;
-  border-top: 2px solid $black;
+  border-bottom: 1px solid $light-gray;
+  border-top: 1px solid $light-gray;
 }
 

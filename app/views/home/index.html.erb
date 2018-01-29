@@ -23,8 +23,8 @@
           <li>Following</li>
           <li><%= @user_following %></li>
         </ul>
+        
         <ul>
-
           <li>Followers</li>
           <li><%=  @user_followers %></li>
         </ul>
@@ -38,7 +38,10 @@
 
       <ul class="home--thrending space--medium-bottom">
         <% 10.times do |i| %>
-          <li><%= Faker::Zelda.item %></li>
+          <li>
+            <div class="text--bold"><%= Faker::Zelda.item %></div>
+            <div class="home--explain"><%= rand(4000) + 42 %> People tweeting about this</div>
+          </li>
         <% end %>
       </ul>
 

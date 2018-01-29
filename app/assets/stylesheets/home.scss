@@ -5,32 +5,31 @@
 
 .home--title {
   color: $black;
-  font-size: $bigger;
-  padding-bottom: $between;
-  padding-top: $medium;
-  text-align: right;
-
-  // &::after {
-  //   content: '';
-  //   display: block;
-  //   height: 1px;
-  //   margin-top: 8px;
-  //   background: $black;
-  // }
+  font-size: $big;
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+  padding: $minor 0px;
 }
 
 .home--thrending {
   margin: 0px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   padding: 0px;
 }
 
 .home--thrending li {
   list-style: none;
-  padding: $between;
+  padding: $micro;
   color: $option-font;
-  font-size: $big;
+  font-size: $medium-text;
   
+}
+
+.home--explain {
+  color: $gray;
+  font-size: $small;
+  padding-top: $micro;
 }
