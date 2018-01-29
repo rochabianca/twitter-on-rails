@@ -3,7 +3,7 @@
 
   <div class="grid__column grid__column--3 only-desktop space--minor-right">
 
-    <div class="profile-card bg--option divider--minor-bottom divider--medium-top flex--center text--center left-margin">
+    <div class="profile-card bg--pic divider--minor-bottom divider--medium-top flex--center text--center left-margin">
       <%= image_tag @rand_profile, :class => "profile-card--image" %>
 
       <div class="profile-card--user">
@@ -46,7 +46,7 @@
       </ul>
 
      <hr class="line space--minor-bottom">
-      <p class="color--black text--center text--small divider--minor-bottom">Twinter 2018 &copy all rights reserved.</p>
+      <p class="color--gray text--center text--small divider--minor-bottom">Twinter 2018 &copy all rights reserved.</p>
     </div>
     </div>
 
@@ -56,23 +56,31 @@
         <div>
           <%= image_tag @rand_profile, class: "timeline--profile space--minor-right" %>
         </div>
-        <textarea id="new-tweet" cols="8" rows="3"></textarea>
+        <%= simple_form_for(Tweet.create) do |f| %>
+        <%= f.text_field :content, placeholder: "What's happening?", :input_html => { :rows => 3 }%>
+        <%# <textarea id="newTweet" cols="8" rows="3"></textarea> , :id => "newTweet"%>
         </div>
         <div class="new-tweet--button">
-          <p>Caracteres: <span class="caracteres"></span></p>
-          <button class="button">Tweet</button>
+          <p><span class="caracteres"></span></p>
+          <button class="button button-tweet">Tweet</button>
+          <% end %>
         </div>
 
       <ul class="timeline">
       <% @tweets.each do |tweet| %>
         <li class="timeline--list">
-        <hr class="line space--minor-bottom">
+        <hr class="line space--minor-top">
           <ul class="flex">
-            <li><%= image_tag "profile-#{rand(3)}.png", :class => "timeline--profile space--minor-right" %></li>
+            <li><%= image_tag "profile-#{rand(4)}.png", :class => "timeline--profile space--minor-right" %></li>
             <div>
             <li class="timeline--username">@<%= tweet.user.username %></li>
             <li class="timeline--tweet"><%= tweet.content %></li>
             <div>
+            <div class=" space--between-bottom space--micro-top button--actions display--none">
+              <i class="fa fa-comment" aria-hidden="true"></i>
+              <i class="fa fa-retweet" aria-hidden="true"></i>
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </div>
           </ul>
         </li>
       <% end %>

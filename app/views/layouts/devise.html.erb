@@ -12,24 +12,27 @@
   </head>
 
   <body class="devise">
-  <div class="grid center">
-    <div class="grid__column grid__column--12">
-      <% if notice %>
-        <p class="alert alert-success animated slideInDown"><%= notice %></p>
-      <% end %>
-    </div>
-    
-    <div class="grid__column grid__column--12">
-      <% if alert %>
-        <p class="alert alert-danger animated slideInDown"><%= alert %></p>
-      <% end %>
-    </div>
-  
-  </div>
-
+  <%= flash_messages %>
   <div class="grid center flex--sign-up flex--center flex--wrap mobile-grid space--major-bottom">
+  
     <%= yield %>
   </div>
 
   </body>
 </html>
+
+<%# <div class="grid center">
+    <div class="grid__column grid__column--12">
+      <% if notice >
+        <p class="alert alert-success animated slideInDown"><%= notice ></p>
+      <% end >
+    </div>
+    
+    <div class="grid__column grid__column--12">
+      <% if alert >
+        <p class="alert alert-danger animated slideInDown"><%= alert ></p>
+      <% end >
+    </div>
+  
+  </div>
+ %>

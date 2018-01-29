@@ -26,3 +26,15 @@
 .button--danger {
   background: $danger;
 }
+
+.button--actions i {
+  transition: all .5s ease;
+  color: #E1DEE3;
+  font-size: $medium-text;
+  padding-right: $major;
+}
+
+.button--disabled {
+    cursor: not-allowed;
+    background-color: rgb(229, 229, 229) !important;
+}

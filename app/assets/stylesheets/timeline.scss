@@ -11,7 +11,6 @@
 }
 
 .timeline--list {
-  
   padding: 15px 30px;
 }
 
@@ -21,6 +20,11 @@
   border-radius: 25px;
 }
 
+.timeline--profile-input {
+  width: 100%;
+}
+
+
 .timeline--username {
   font-size: $medium-text;
   padding-bottom: $micro !important;
@@ -29,7 +33,9 @@
 }
 
 .timeline--tweet {
+  display: inline-block;
   font-size: $medium-text;
   line-height: 1.4;
   color: $black;
+  padding-bottom: $between !important;
 }

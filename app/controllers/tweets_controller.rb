@@ -9,4 +9,11 @@ class TweetsController < ApplicationController
     end
 
   end
+
+  def create
+    @tweet = Tweet.new(params[:content])
+    @tweet.user_id = current_user.id
+    @tweet.save
+  end
+  
 end

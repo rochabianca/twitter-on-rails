@@ -13,17 +13,17 @@
 
   <body class="bg--home">
   <div class="grid bg--option-font">
-    <div class="grid__column grid__column--12">
-      <% if notice %>
-        <p class="alert alert-success"><%= notice %></p>
-      <% end %>
+    <%# <div class="grid__column grid__column--12">
+      <% if notice >
+        <p class="alert alert-success"><%= notice ></p>
+      <% end >
     </div>
     
     <div class="grid__column grid__column--12">
-    <% if alert %>
-      <p class="alert alert-danger"><%= alert %></p>
-    <% end %>
-    </div>
+    <% if alert >
+      <p class="alert alert-danger"><%= alert ></p>
+    <% end>
+    </div> %>
 
     <header class="container">
       <div class=" header">
@@ -43,5 +43,7 @@
 
     
     <%= yield %>
+
+    <script src="https://use.fontawesome.com/108be0a276.js"></script>
   </body>
 </html>
