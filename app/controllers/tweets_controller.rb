@@ -11,9 +11,15 @@ class TweetsController < ApplicationController
   end
 
   def create
-    @tweet = Tweet.new(params[:content])
+    @tweet = Tweet.new(resource_params)
     @tweet.user_id = current_user.id
-    @tweet.save
+    @tweet.save!
+  end
+
+  protected
+
+  def resource_params
+    params.require(:tweet).permit([:content])
   end
   
 end

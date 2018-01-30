@@ -34,6 +34,22 @@ namespace :sample_data do
   end
 end
 
+namespace :sample_data do
+  desc "This task make users follow randow users"
+  task follow_himself: :environment do
+    (User.all.length).times do |i|
+      user = User.connection.select_values(User.select("id").to_sql)
+      # puts user[1]
+
+      Follow.create!(
+        user_id: user[i],
+        follower_id: user[i]
+      )
+      puts "User #{i} Followed himsel"
+    end
+  end
+end
+
 
 
 namespace :sample_data do

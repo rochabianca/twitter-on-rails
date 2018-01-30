@@ -37,3 +37,13 @@
   border-radius: $micro;
   padding: $between $minor;
 }
+
+.new-tweet--form form, .new-tweet--form {
+  width: 100%;
+}
+
+.new-tweet--input, input[type=text] {
+  height: 70px;
+  border-radius: 5px;
+  border: 1px solid $option-font;
+}

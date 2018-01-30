@@ -56,9 +56,11 @@
         <div>
           <%= image_tag @rand_profile, class: "timeline--profile space--minor-right" %>
         </div>
-        <%= simple_form_for(Tweet.create) do |f| %>
-        <%= f.text_field :content, placeholder: "What's happening?", :input_html => { :rows => 3 }%>
-        <%# <textarea id="newTweet" cols="8" rows="3"></textarea> , :id => "newTweet"%>
+        <div class="new-tweet--form">
+          <%= simple_form_for(Tweet.create) do |f| %>
+          <%= f.text_field :content, placeholder: "What's happening?", :input_html => { :rows => 3 } , :class => "new-tweet--input"%>
+          <%# <textarea id="newTweet" cols="8" rows="3"></textarea> , :id => "newTweet"%>
+        </div>
         </div>
         <div class="new-tweet--button">
           <p><span class="caracteres"></span></p>

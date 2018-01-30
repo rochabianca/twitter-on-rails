@@ -9,7 +9,7 @@ class HomeController < ApplicationController
     @rand_profile = "profile-#{rand(4)}.png"
 
     @user_username = current_user.username
-    @user_following = @follow_user.count
+    @user_following = @follow_user.count - 1
     @user_followers = @followed_user.count
     # Tweet.
     # where(user_id: current_user).destroy_all
