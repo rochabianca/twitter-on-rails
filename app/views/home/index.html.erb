@@ -1,7 +1,7 @@
 <div class="grid space--minor-top ">
   <div class="container flex flex--wrap flex--flex-start">
 
-  <div class="grid__column grid__column--3 only-desktop space--minor-right">
+  <div class="grid__column grid__column--3 only-desktop divider--minor-right">
 
     <div class="profile-card bg--pic divider--minor-bottom divider--medium-top flex--center text--center left-margin">
       <%= image_tag @rand_profile, :class => "profile-card--image" %>
@@ -51,14 +51,14 @@
     </div>
 
 
-    <div class="grid__column grid__column--8 bg--white left-margin">
+    <div class="grid__column grid__column--9 bg--white left-margin">
       <div class="new-tweet">
         <div>
           <%= image_tag @rand_profile, class: "timeline--profile space--minor-right" %>
         </div>
         <div class="new-tweet--form">
           <%= simple_form_for(Tweet.create) do |f| %>
-          <%= f.text_field :content, placeholder: "What's happening?", :input_html => { :rows => 3 } , :class => "new-tweet--input"%>
+          <%= f.text_field :content, placeholder: "What's happening?", input_html: {rows: '6'} , :class => "new-tweet--input",  autocomplete: "off"%>
           <%# <textarea id="newTweet" cols="8" rows="3"></textarea> , :id => "newTweet"%>
         </div>
         </div>

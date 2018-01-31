@@ -13,7 +13,8 @@ class TweetsController < ApplicationController
   def create
     @tweet = Tweet.new(resource_params)
     @tweet.user_id = current_user.id
-    @tweet.save!
+    @tweet.save
+    redirect_to root_path
   end
 
   protected

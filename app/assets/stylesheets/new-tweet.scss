@@ -42,7 +42,7 @@
   width: 100%;
 }
 
-.new-tweet--input, input[type=text] {
+input[type=text].new-tweet--input  {
   height: 70px;
   border-radius: 5px;
   border: 1px solid $option-font;
