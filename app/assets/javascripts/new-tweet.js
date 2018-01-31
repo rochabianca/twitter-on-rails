@@ -8,9 +8,10 @@ $(document).on('turbolinks:load', function () {
 $(document).on('keyup paste', '#tweet_content', function() {
   setTimeout(function() {
   var valorTextarea = $('#tweet_content').val().length,
-      palavras = $('#tweet_content').val().split(' ').length;
+      // palavras = $('#tweet_content').val().split(' ').length;
 
-  totalCaracteres = (140-valorTextarea+palavras-1);
+  // totalCaracteres = (140-valorTextarea+palavras-1);
+  totalCaracteres = (140-valorTextarea);
 
   if (totalCaracteres < 16) {
     $('.caracteres').addClass('text--danger');

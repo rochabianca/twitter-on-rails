@@ -30,6 +30,7 @@
 }
 
 .new-tweet--button button {
+  transition: all .5s ease;
   display: inline-block;
   margin: 0px;
   margin-top: $between;

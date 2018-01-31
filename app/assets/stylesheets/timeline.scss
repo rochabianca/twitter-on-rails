@@ -24,6 +24,9 @@
   width: 100%;
 }
 
+.timeline--tweet-content {
+  max-width: 90%;
+}
 
 .timeline--username {
   font-size: $medium-text;
@@ -37,5 +40,8 @@
   font-size: $medium-text;
   line-height: 1.4;
   color: $black;
+  max-width: 100%;
+  
   padding-bottom: $between !important;
+  word-wrap: break-word;
 }

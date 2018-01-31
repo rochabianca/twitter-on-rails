@@ -31,7 +31,15 @@
   transition: all .5s ease;
   color: #E1DEE3;
   font-size: $medium-text;
-  padding-right: $major;
+  padding-right: $medium;
+
+  &:hover {
+    color: $gray;
+  }
+}
+
+.button--heart-clicked {
+  color: $danger;
 }
 
 .button--disabled {
