@@ -30,11 +30,12 @@
         <div>
             <%= image_tag "twinter-white.png", :class => "logo header--logo" %>
         </div>
-
+     
         <ul>
           <li>Home</li>
           <li>Notifications</li>
           <li>Profile</li>
+          <li><%= link_to 'Account', edit_user_registration_path, :class => "link link--white" %></li>
           <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => "link link--white" %></li>
         </ul>
       </div>
