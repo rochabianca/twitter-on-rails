@@ -17,4 +17,5 @@
 //= require new-tweet.js
 //= require actions.js
 //= require carousel
+//= require jquery.infinitescroll
 //= require_tree .

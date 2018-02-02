@@ -52,7 +52,7 @@
 
 
     <div class="grid__column grid__column--9 bg--white left-margin">
-      <div class="new-tweet">
+      <div class="new-tweet tweets">
         <div>
           <%= image_tag @rand_profile, class: "timeline--profile space--minor-right" %>
         </div>
@@ -87,6 +87,7 @@
         </li>
       <% end %>
       </ul>
+      <%= paginate @tweets %>
     </div>
     
   </div>

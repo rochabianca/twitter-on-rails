@@ -3,9 +3,9 @@ class TweetsController < ApplicationController
   def index
     if params[:username]
       @user = User.where(username: params[:username]).first
-      @tweets = @user.tweets;
+      @tweets_user = @user.tweets;
     else
-      @tweets = Tweet.all
+      @tweets_user = Tweet.all
     end
 
   end
