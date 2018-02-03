@@ -87,8 +87,16 @@
         </li>
       <% end %>
       </ul>
-      <%= paginate @tweets %>
+       <%= paginate @tweets %>
+    <%= page_entries_info @tweets %>
+
+    <% if @tweets.next_page %>
+  $('.pagination').replaceWith('<%= j paginate @tweets %>');
+<% else %>
+  $(window).off('scroll');
+  $('.pagination').remove();
+<% end %>
     </div>
-    
+   
   </div>
 </div>
