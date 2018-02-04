@@ -76,7 +76,7 @@
             <li><%= image_tag "profile-#{rand(4)}.png", :class => "timeline--profile space--minor-right" %></li>
             <div class="timeline--tweet-content">
             <li class="timeline--username">@<%= tweet.user.username %></li>
-            <li class="timeline--tweet"><%= tweet.content %></li>
+            <li class="timeline--tweet"><%= sanitize tweet.content %></li>
             <div>
             <div class="space--between-bottom button--actions">
               <i class="fa fa-comment comment" aria-hidden="true"></i>

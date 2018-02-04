@@ -45,3 +45,14 @@
   padding-bottom: $between !important;
   word-wrap: break-word;
 }
+
+.timeline--link {
+  color: $option-font;
+  text-decoration: none;
+  //transition: all .5s ease;
+
+  &:hover {
+   
+    text-decoration: underline;
+  }
+}

@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :tweets
 
   get ':username' => 'tweets#index', as: 'username_tweets'
+  get '/:id' => "shortener/shortened_urls#show"
 end

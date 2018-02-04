@@ -182,6 +182,8 @@ GEM
     selenium-webdriver (3.8.0)
       childprocess (~> 0.5)
       rubyzip (~> 1.0)
+    shortener (0.5.5)
+      rails (>= 3.0.7)
     simple_form (3.5.0)
       actionpack (> 4, < 5.2)
       activemodel (> 4, < 5.2)
@@ -244,6 +246,7 @@ DEPENDENCIES
   rubocop
   sass-rails (~> 5.0)
   selenium-webdriver
+  shortener
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)

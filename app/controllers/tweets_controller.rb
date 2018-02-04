@@ -22,5 +22,4 @@ class TweetsController < ApplicationController
   def resource_params
     params.require(:tweet).permit([:content])
   end
-  
 end

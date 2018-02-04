@@ -1,9 +1,9 @@
-
 <div class="grid__column grid__column--3 center bg--primary downpad space-to-center mobile-grid left-margin bg--primary__minor-opacity" >
-<%= image_tag "twinter-white.png", :class => "logo" %>
-<hr class="line">
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <%= image_tag "twinter-white.png", class: "logo" %>
+  <hr class="line">
+
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <%= f.input :login, autofocus: true, autocomplete: "email", placeholder: "elsa@twinter.com", :class => "space--between-bottom space--micro-top"  %>
     
     <%= f.input :password, autocomplete: "off", placeholder: "******", :class => "space--micro-top space--between-bottom" %>

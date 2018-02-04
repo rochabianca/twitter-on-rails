@@ -7,6 +7,12 @@ class HomeController < ApplicationController
       format.html
       format.js
     end
+
+    @tweets.each do |tweet|
+      tweet.content = tweet.content.split.map { |x| x =~ URI::regexp ? makelink(x) : x }.join(" ")
+    end 
+
+
     @follow_user = User.where(id: @following.pluck(:follower_id))
     @followed_user = Follow.all.where(follower_id: current_user.id)
 
@@ -30,6 +36,10 @@ class HomeController < ApplicationController
 
   def crud  
     @create_tweet = Tweet.create(content: "", user_id: current_user.id)
+  end
+
+  def makelink(url)
+    '<a class="timeline--link" href="' + short_url("#{url}") + '"target="_blank">' + short_url("#{url}") + '</a>'
   end
 
   
