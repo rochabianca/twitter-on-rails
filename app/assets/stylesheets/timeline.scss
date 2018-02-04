@@ -56,3 +56,19 @@
     text-decoration: underline;
   }
 }
+
+.timeline--pagination {
+  color: $gray;
+  a {
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+    &:visited {
+      color: $option;
+    }
+  }
+  margin-bottom: $medium;
+}

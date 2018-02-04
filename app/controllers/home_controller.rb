@@ -39,7 +39,7 @@ class HomeController < ApplicationController
   end
 
   def makelink(url)
-    '<a class="timeline--link" href="' + short_url("#{url}") + '"target="_blank">' + short_url("#{url}") + '</a>'
+    '<a class="timeline--link" href="' + url + '"target="_blank" >' + url[0..40] + '...' + '</a>'
   end
 
   

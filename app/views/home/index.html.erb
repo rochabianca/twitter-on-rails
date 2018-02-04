@@ -87,15 +87,10 @@
         </li>
       <% end %>
       </ul>
+      <div class="center-this timeline--pagination">
        <%= paginate @tweets %>
-    <%= page_entries_info @tweets %>
-
-    <% if @tweets.next_page %>
-  $('.pagination').replaceWith('<%= j paginate @tweets %>');
-<% else %>
-  $(window).off('scroll');
-  $('.pagination').remove();
-<% end %>
+       <%= page_entries_info @tweets %>
+      </div>
     </div>
    
   </div>
