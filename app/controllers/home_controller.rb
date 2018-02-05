@@ -1,3 +1,4 @@
+require 'rails_autolink'
 class HomeController < ApplicationController
   before_action :load_widget_data
 
@@ -8,11 +9,6 @@ class HomeController < ApplicationController
       format.js
     end
 
-    @tweets.each do |tweet|
-      tweet.content = tweet.content.split.map { |x| x =~ URI::regexp ? makelink(x) : x }.join(" ")
-    end 
-
-
     @follow_user = User.where(id: @following.pluck(:follower_id))
     @followed_user = Follow.all.where(follower_id: current_user.id)
 
@@ -21,8 +17,6 @@ class HomeController < ApplicationController
     @user_username = current_user.username
     @user_following = @follow_user.count - 1
     @user_followers = @followed_user.count
-    # Tweet.
-    # where(user_id: current_user).destroy_all
   end
   
   protected
@@ -34,12 +28,14 @@ class HomeController < ApplicationController
     @following = current_user.following_links
   end
 
-  def crud  
-    @create_tweet = Tweet.create(content: "", user_id: current_user.id)
-  end
-
   def makelink(url)
-    '<a class="timeline--link" href="' + url + '"target="_blank" >' + url[0..40] + '...' + '</a>'
+    if url.length > 40
+      '<a class="timeline--link" href="' + url + '"target="_blank" >' + url[0..40] + '...' + '</a>'
+    else
+      '<a class="timeline--link" href="' + url + '"target="_blank" >' + url + '</a>'
+    end
+
+    
   end
 
   

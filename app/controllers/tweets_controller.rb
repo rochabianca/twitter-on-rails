@@ -17,6 +17,10 @@ class TweetsController < ApplicationController
     redirect_to root_path
   end
 
+  def destroy
+    Tweet.find(params[:id]).destroy
+  end
+
   protected
 
   def resource_params

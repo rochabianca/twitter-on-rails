@@ -59,37 +59,24 @@
         <div class="new-tweet--form">
           <%= simple_form_for(Tweet.create) do |f| %>
           <%= f.input :content,as: :text, label: false, :error => false ,  placeholder: "What's happening?", input_html: {:rows => '6'} , :class => "new-tweet--input",  autocomplete: "off"%>
-          <%# <textarea id="newTweet" cols="8" rows="3"></textarea> , :id => "newTweet"%>
         </div>
         </div>
         <div class="new-tweet--button">
           <p><span class="caracteres"></span></p>
-          <button class="button button-tweet">Tweet</button>
+          <button class="button button-tweet"id="sendTweet">Tweet</button>
           <% end %>
         </div>
 
-      <ul class="timeline">
-      <% @tweets.each do |tweet| %>
-        <li class="timeline--list">
-        <hr class="line space--minor-top">
-          <ul class="flex timeline--tweet-content">
-            <li><%= image_tag "profile-#{rand(4)}.png", :class => "timeline--profile space--minor-right" %></li>
-            <div class="timeline--tweet-content">
-            <li class="timeline--username">@<%= tweet.user.username %></li>
-            <li class="timeline--tweet"><%= sanitize tweet.content %></li>
-            <div>
-            <div class="space--between-bottom button--actions">
-              <i class="fa fa-comment comment" aria-hidden="true"></i>
-              <i class="fa fa-retweet retweet" aria-hidden="true"></i>
-              <i class="fa fa-heart heart" aria-hidden="true"></i>
-            </div>
-          </ul>
-        </li>
-      <% end %>
+      <ul class="timeline" id="timeline">
+        <div class="timeline--page">
+          <%= render @tweets %>
+           <%= paginate @tweets %>
+        </div>
+       
       </ul>
       <div class="center-this timeline--pagination">
-       <%= paginate @tweets %>
-       <%= page_entries_info @tweets %>
+       
+       <%# <%= page_entries_info @tweets %> 
       </div>
     </div>
    

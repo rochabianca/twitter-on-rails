@@ -18,4 +18,5 @@
 //= require actions.js
 //= require carousel
 //= require jquery.infinitescroll
+//= require tweets.coffee
 //= require_tree .

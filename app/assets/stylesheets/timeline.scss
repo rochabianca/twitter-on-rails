@@ -26,6 +26,7 @@
 
 .timeline--tweet-content {
   max-width: 90%;
+  width: 100%;
 }
 
 .timeline--username {
@@ -44,6 +45,15 @@
   
   padding-bottom: $between !important;
   word-wrap: break-word;
+
+  a {
+    color: $option-font;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .timeline--link {
@@ -60,6 +70,7 @@
 .timeline--pagination {
   color: $gray;
   a {
+    color: $gray;
     font-weight: bold;
     text-decoration: none;
 
@@ -71,4 +82,19 @@
     }
   }
   margin-bottom: $medium;
+}
+
+.timeline--delete a{
+  position: fixed;
+  right: 410px;
+  color: $light-gray;
+  text-decoration: none;
+
+  &:hover {
+    color: $gray;
+  }
+}
+
+.pagination {
+  display: none;
 }
