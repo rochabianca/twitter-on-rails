@@ -2,10 +2,9 @@
 // # All this logic will automatically be available in application.js.
 // # You can use CoffeeScript in this file: http://coffeescript.org/
 
-// $(document).ready(function(){
-// 		$("#sendTweet").click(function( e ){
-// 			e.preventDefault();
-// 			var href = $( this ).attr('href');
-// 			$("#timeline").load( href +" #timeline");
-// 		});
-// 	});
+//  $(document).ready(function(){
+//  		$("#sendTweet").click(function( e ){
+//  			e.preventDefault();
+//  			$("#timeline").load(root_path);
+//  		});
+//  	});

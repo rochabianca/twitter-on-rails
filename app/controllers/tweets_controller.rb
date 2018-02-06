@@ -14,7 +14,7 @@ class TweetsController < ApplicationController
     @tweet = Tweet.new(resource_params)
     @tweet.user_id = current_user.id
     @tweet.save
-    redirect_to root_path
+    # redirect_to root_path
   end
 
   def destroy

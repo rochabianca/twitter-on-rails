@@ -57,27 +57,23 @@
           <%= image_tag @rand_profile, class: "timeline--profile space--minor-right" %>
         </div>
         <div class="new-tweet--form">
-          <%= simple_form_for(Tweet.create) do |f| %>
+          <%= simple_form_for(Tweet.new, remote: true) do |f| %>
           <%= f.input :content,as: :text, label: false, :error => false ,  placeholder: "What's happening?", input_html: {:rows => '6'} , :class => "new-tweet--input",  autocomplete: "off"%>
         </div>
         </div>
         <div class="new-tweet--button">
           <p><span class="caracteres"></span></p>
-          <button class="button button-tweet"id="sendTweet">Tweet</button>
+          <button class="button button-tweet"id="sendTweet" type="submit">Tweet</button>
           <% end %>
         </div>
 
       <ul class="timeline" id="timeline">
-        <div class="timeline--page">
+        <div class="timeline--page" id="timeline--tweets">
           <%= render @tweets %>
            <%= paginate @tweets %>
         </div>
        
       </ul>
-      <div class="center-this timeline--pagination">
-       
-       <%# <%= page_entries_info @tweets %> 
-      </div>
     </div>
    
   </div>
