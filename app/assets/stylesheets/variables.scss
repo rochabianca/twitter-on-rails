@@ -1,7 +1,10 @@
-$primary: #5060DE;
-$secundary: #191C22;
-$option: #536CAC;
+$primary: #81a9cc;
+$secundary: #6cc4f8;
+$font-color: #688fb3;
+$option: #6c94b8;
 $option-font: #5BA8E2;
+
+$hover-links: #96D5F0;
 
 $white: #fff;
 $black: #191C22;
@@ -17,10 +20,12 @@ $minor: 15px;
 $medium: 30px;
 $major: 60px;
 
-$small: 11px;
+$small: 12px;
 $medium-text: 15px;
 $big: 20px;
 $bigger: 24px;
+
+$width-lateral-menu: 250px;
 
 // Box-sizing
 *, *::after, *::before {
@@ -30,12 +35,12 @@ $bigger: 24px;
 // Mixin de media-queries
 @mixin d($size) {
 	@if $size == l {
-		@media screen and (min-width: 1200px) {
+		@media screen and (min-width: 1600px) {
 			@content;
 		}
 	}
 	@else if $size == m {
-		@media screen and (min-width: 768px) and (max-width: 1200px - 1) {
+		@media screen and (min-width: 768px) and (max-width: 1600px - 1) {
 			@content;
 		}
 	}

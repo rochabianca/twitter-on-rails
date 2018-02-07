@@ -1,0 +1,108 @@
+@import 'variables';
+.menu {
+  background: $primary;
+  width: $width-lateral-menu;
+  height: 100%;
+}
+
+.menu__fixed {
+  position: fixed;
+}
+
+.menu--logo {
+  background: $secundary;
+  padding: 15px;
+  
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+.menu--pic {
+  margin: $minor auto;
+  img {
+    display: block;
+    width: 80px;
+    border-radius: 40px;
+    border: 2px solid $white;
+    margin: 0 auto;
+  }
+}
+
+.menu--text {
+  display: block;
+  text-align: center;
+  color: $white;
+}
+
+.menu--username {
+  margin: $minor auto;
+  text-transform: capitalize;
+  font-size: $big;
+}
+
+.menu--bio {
+  margin: $minor 0 $medium 0;
+  padding: 0 $minor;
+  font-size: $medium-text;
+}
+
+.menu__info {
+  b {
+    font-size: $medium-text;
+    color: $font-color;
+
+    @include d(m) {
+      font-size: $small;
+    }
+  }
+  p {
+    text-align: center;
+    color: $white;
+    font-size: $big;
+    margin: $micro auto $medium auto;
+  }
+}
+
+.menu--items {
+  padding: 0px;
+  list-style: none;
+  text-align: left;
+  flex-flow: column nowrap;
+  a {
+    text-decoration: none;
+    &:last-child {
+      border-bottom: 1px solid $option;
+    }
+  }
+  li {
+    color: $white;
+    font-size: $big;
+    font-weight: lighter;
+    padding: $between 0;
+    border-top: 1px solid $option;
+  }
+  li:hover{
+    color: $hover-links;
+  }
+  li i {
+    padding: 0 $minor 0 $medium;
+  }
+}
+
+.menu__footer {
+  position: fixed;
+  bottom: 0;
+  background: $secundary;
+  display: block;
+  width: $width-lateral-menu;
+}
+
+.menu__footer i {
+  text-align: center;
+  color: $white;
+  font-size: $medium;
+  display: block;
+}

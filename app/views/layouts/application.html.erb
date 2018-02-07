@@ -11,34 +11,10 @@
      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="bg--home">
-  <div class="grid bg--option-font">
-    <%# <div class="grid__column grid__column--12">
-      <% if notice >
-        <p class="alert alert-success"><%= notice ></p>
-      <% end >
-    </div>
-    
-    <div class="grid__column grid__column--12">
-    <% if alert >
-      <p class="alert alert-danger"><%= alert ></p>
-    <% end>
-    </div> %>
-
-    <header class="container">
-      <div class=" header">
-        <div>
-            <%= image_tag "twinter-white.png", :class => "logo header--logo" %>
-        </div>
+  <body class="essential--font">
+  <div class="">
+    <header class="">
      
-        <ul>
-          <li>Home</li>
-          <li>Notifications</li>
-          <li>Profile</li>
-          <li><%= link_to 'Account', edit_user_registration_path, :class => "link link--white" %></li>
-          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => "link link--white" %></li>
-        </ul>
-      </div>
     </header>
   </div>
 

@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   get ':username' => 'tweets#index', as: 'username_tweets'
   get '/:id' => "shortener/shortened_urls#show"
+  get '/404' => 'tweets#not_found';
 end
