@@ -1,53 +1,66 @@
 <div class="grid space--minor-top ">
   <div class="container flex flex--wrap flex--flex-start">
 
-  <div class="grid__column grid__column--3 only-desktop divider--minor-right">
+    <div class="grid__column grid__column--3 only-desktop divider--minor-right">
 
-    <div class="profile-card bg--pic divider--minor-bottom divider--medium-top flex--center text--center left-margin">
-      <%= image_tag @rand_profile, :class => "profile-card--image" %>
+      <div class="profile-card bg--pic divider--minor-bottom divider--medium-top flex--center text--center left-margin">
+        <%= image_tag @rand_profile, :class => "profile-card--image" %>
 
-      <div class="profile-card--user">
-        <h3 class="profile-card--username"> <%= @user_username %> </h3>
-        <p class="profile-card--quote"> <%= Faker::TheFreshPrinceOfBelAir.quote %> </p>
+          <div class="profile-card--user">
+            <h3 class="profile-card--username">
+              <%= @user_username %>
+            </h3>
+            <p class="profile-card--quote">
+              <%= Faker::TheFreshPrinceOfBelAir.quote %>
+            </p>
+          </div>
+
       </div>
-
-    </div>
 
       <div class="flex profile-card--followers bg--white space--minor-bottom profile-card--border">
         <ul>
           <li>Tweets</li>
-          <li><%=  current_user.tweets.count %></li>
+          <li>
+            <%=  current_user.tweets.count %>
+          </li>
         </ul>
 
         <ul>
           <li>Following</li>
-          <li><%= @user_following %></li>
+          <li>
+            <%= @user_following %>
+          </li>
         </ul>
-        
+
         <ul>
           <li>Followers</li>
-          <li><%=  @user_followers %></li>
+          <li>
+            <%=  @user_followers %>
+          </li>
         </ul>
       </div>
 
 
 
-    <div class="bg--white left-margin">
-      <h2 class="home--title">Trending</h2>
-      <hr class="line space--minor-bottom">
+      <div class="bg--white left-margin">
+        <h2 class="home--title">Trending</h2>
+        <hr class="line space--minor-bottom">
 
-      <ul class="home--thrending space--medium-bottom">
-        <% 10.times do |i| %>
-          <li>
-            <div class="text--bold"><%= Faker::Zelda.item %></div>
-            <div class="home--explain"><%= rand(4000) + 42 %> People tweeting about this</div>
-          </li>
-        <% end %>
-      </ul>
+        <ul class="home--thrending space--medium-bottom">
+          <% 10.times do |i| %>
+            <li>
+              <div class="text--bold">
+                <%= Faker::Zelda.item %>
+              </div>
+              <div class="home--explain">
+                <%= rand(4000) + 42 %> People tweeting about this</div>
+            </li>
+            <% end %>
+        </ul>
 
-     <hr class="line space--minor-bottom">
-      <p class="color--gray text--center text--small divider--minor-bottom">Twinter 2018 &copy all rights reserved.</p>
-    </div>
+        <hr class="line space--minor-bottom">
+        <p class="color--gray text--center text--small divider--minor-bottom">Twinter 2018 &copy all rights reserved.</p>
+      </div>
     </div>
 
 
@@ -58,23 +71,25 @@
         </div>
         <div class="new-tweet--form">
           <%= simple_form_for(Tweet.new, remote: true) do |f| %>
-          <%= f.input :content,as: :text, label: false, :error => false ,  placeholder: "What's happening?", input_html: {:rows => '6'} , :class => "new-tweet--input",  autocomplete: "off"%>
+            <%= f.input :content,as: :text, label: false, :error => false ,  placeholder: "What's happening?", input_html: {:rows => '6'} , :class => "new-tweet--input",  autocomplete: "off"%>
         </div>
-        </div>
-        <div class="new-tweet--button">
-          <p><span class="caracteres"></span></p>
-          <button class="button button-tweet"id="sendTweet" type="submit">Tweet</button>
-          <% end %>
-        </div>
+      </div>
+      <div class="new-tweet--button">
+        <p>
+          <span class="caracteres"></span>
+        </p>
+        <button class="button button-tweet" id="sendTweet" type="submit">Tweet</button>
+        <% end %>
+      </div>
 
       <ul class="timeline" id="timeline">
         <div class="timeline--page" id="timeline--tweets">
           <%= render @tweets %>
-           <%= paginate @tweets %>
+            <%= paginate @tweets %>
         </div>
-       
+
       </ul>
     </div>
-   
+
   </div>
 </div>

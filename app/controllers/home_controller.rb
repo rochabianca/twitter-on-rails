@@ -23,20 +23,7 @@ class HomeController < ApplicationController
 
   def load_widget_data
     return true if !user_signed_in?
-    
     @followers = current_user.followers_links
     @following = current_user.following_links
-  end
-
-  def makelink(url)
-    if url.length > 40
-      '<a class="timeline--link" href="' + url + '"target="_blank" >' + url[0..40] + '...' + '</a>'
-    else
-      '<a class="timeline--link" href="' + url + '"target="_blank" >' + url + '</a>'
-    end
-
-    
-  end
-
-  
+  end  
 end
