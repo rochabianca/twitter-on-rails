@@ -1,0 +1,37 @@
+@import 'variables';
+.profile {
+  padding-left: $minor;
+}
+
+.profile__pic img {
+  
+  width: 61px;
+  flex-grow: 0;
+  border-radius: 50%;
+}
+
+.profile__username {
+  width: 100%;
+}
+
+.profile__username span {
+  padding: 0px $between;
+}
+
+.profile__user {
+  font-weight: bold;
+  font-size: $medium-text;
+}
+
+.profile__delete-tweet a {
+  text-decoration: none;
+  color: $gray;
+  transition: 0.5s ease;
+  &:hover {
+    color: $hover-links
+  }
+}
+
+.profile p {
+  flex-direction: column;
+}

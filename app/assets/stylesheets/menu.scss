@@ -11,7 +11,7 @@
 
 .menu--logo {
   background: $secundary;
-  padding: 15px;
+  padding: $minor;
   
   img {
     display: block;
@@ -95,9 +95,16 @@
 .menu__footer {
   position: fixed;
   bottom: 0;
-  background: $secundary;
+  background: $primary;
   display: block;
   width: $width-lateral-menu;
+  cursor: pointer;
+  
+}
+
+.menu__footer p {
+  margin: 0px;
+  z-index: 999;
 }
 
 .menu__footer i {
@@ -105,4 +112,38 @@
   color: $white;
   font-size: $medium;
   display: block;
+  background: $secundary;
+  padding: $minor;
+  
+}
+
+.menu__footer ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  background: $white;
+}
+
+.menu__footer ul li {
+  border: 1px solid $primary;
+  padding: 15px;
+  text-align: center;
+
+  a {
+    color: $font-color;
+    font-weight: lighter;
+    text-decoration: none;
+
+    &:hover {
+      color: $hover-links;
+    }
+  }
+}
+
+.menu__option {
+  z-index: -1;
+}
+
+#menu__footer-index {
+  z-index: 999;
 }

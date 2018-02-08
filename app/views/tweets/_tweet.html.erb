@@ -1,22 +1,21 @@
 <li class="timeline--list" id="tweet__<%= tweet.id %>">
-  <hr class="line space--minor-top">
-    <ul class="flex timeline--tweet-content">
-      <li><div><%= image_tag "profile-#{rand(4)}.png", :class => "timeline--profile space--minor-right" %></div></li>
-      <div class="timeline--tweet-content">
-      <div class="flex flex--space-between">
-      <li class="timeline--username">@<%= tweet.user.username %></li>
-      <%# <li class="timeline--delete"><%= link_to '×', tweet, method: :delete, data: { confirm: 'Are you sure?' } %</li> %>
-      </div>
-      <li class="timeline--tweet"><%= auto_link(tweet.content, :html => { :target => '_blank' }) do |text| %>
+  <div class="flex">
+  <div class="profile profile__pic"><%= image_tag "profile-#{rand(4)}.png" %></div>
+
+  <ul class="timeline__tweet-content">
+    <li>
+      <div class="profile__username flex flex__content-space-between">
+          <span class="profile__user">@<%= tweet.user.username %></span>
+          <span class="profile__delete-tweet"><%= link_to '×', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+        </div>
+    </li>
+    <li><p>
+        <%= auto_link(tweet.content, :html => { :target => '_blank' }) do |text| %>
         <% truncate(text, :length => 40) %>
         <% end %>
-        </li>
-      
-      <div>
-      <div class="space--between-bottom button--actions">
-        <i class="fa fa-comment comment" aria-hidden="true"></i>
-        <i class="fa fa-retweet retweet" aria-hidden="true"></i>
-        <i class="fa fa-heart heart" aria-hidden="true"></i>
-      </div>
-    </ul>
+      </p></li>
+  </ul>
+  
+  </div>
+    
 </li>

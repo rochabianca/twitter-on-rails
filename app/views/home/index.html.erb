@@ -37,12 +37,36 @@
         </ul>
       </section>
 
-      <footer class="menu__footer">
-          <p><i class="fa fa-cogs" aria-hidden="true"></i></p>
+      <footer class="menu__footer" id="menu__footer">
+          <ul class="essential__display-none animated menu__option" id="log-out-option">
+            <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => "" %></li>
+          </ul>
+          <p id="menu__footer-index"><i class="fa fa-cogs" aria-hidden="true"></i></p>
       </footer>
 
 
-
     </div>
+  </section>
+
+  <section class="grid__column grid__column--5 timeline timeline__margin">
+    <div class="timeline__header timeline__menu flex flex__content-space-between flex__align-center"><span></span><h3>Timeline</h3> <i class="fa fa-angle-down" aria-hidden="true"></i>
+    </div>
+
+    <ul class="timeline__tweets" id="timeline">
+        <div class="timeline--page" id="timeline--tweets">
+          <%= render @tweets %>
+          <%= paginate @tweets %>
+        </div>
+      </ul>
+  </section>
+
+  <section class="grid__column grid__column--2 timeline">
+      <div class="timeline__header mentions__menu flex flex__content-space-between flex__align-center"><span></span><h3>Mentions</h3> <i class="fa fa-angle-down" aria-hidden="true"></i>
+      </div>
+  </section>
+
+  <section class="grid__column grid__column--3 timeline">
+      <div class="timeline__header trending__menu flex flex__content-space-between flex__align-center"><span></span><h3>Trending</h3> <i class="fa fa-angle-down" aria-hidden="true"></i>
+      </div>
   </section>
 </div>

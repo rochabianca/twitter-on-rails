@@ -1,0 +1,72 @@
+@import 'variables';
+.timeline {
+  border-right: 1px solid $light-gray;
+}
+
+.timeline__margin {
+  margin-left: $width-lateral-menu;
+}
+
+.timeline__header {
+  position: fixed;
+  border-bottom: 1px solid $light-gray;
+  background: $white;
+}
+
+.timeline__menu {
+  width: 41.66%;
+}
+
+.mentions__menu {
+  width: 16.66%;
+}
+
+.timeline__grid {
+  width: 19.12%;
+}
+
+.trending__menu {
+  width:  19.12%;
+}
+
+.timeline__header i {
+  padding-right: $between;
+}
+
+.timeline__header h3 {
+  margin: 0px;
+  padding: $minor;
+  font-size: $bigger;
+  font-weight: lighter;
+}
+
+.timeline__tweets {
+  margin-top: 60px;
+  padding: 0px;
+}
+
+.timeline--list {
+  padding: $between 0px;
+  border-bottom: 1px solid $light-gray;
+}
+
+.timeline__tweet-content {
+  max-width: 100%;
+  width: 100%;
+  padding: 0px;
+  word-wrap: break-word;
+  li {
+    list-style: none;
+  }
+
+  li p {
+    max-width: 80%;
+    padding: $minor;
+    margin: 0px;
+  }
+}
+
+
+.pagination {
+  display: none;
+}

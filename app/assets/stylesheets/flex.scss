@@ -9,6 +9,19 @@
   justify-content: center;
 }
 
+.flex__content-space-between {
+  justify-content: space-between;
+}
+
+.flex__align-center {
+  align-items: center;
+}
+
+
 .flex__items {
   padding: $between;
+}
+
+.flex__wrap {
+  flex-flow: row wrap
 }
