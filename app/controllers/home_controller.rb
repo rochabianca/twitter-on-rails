@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   before_action :load_widget_data
 
   def index
-    @tweets =  Tweet.where(user_id: @following.pluck(:follower_id)).includes(:user).order(:created_at).reverse_order.page(params[:page]).per(10)
+    @tweets =  Tweet.where(user_id: @following.pluck(:follower_id)).includes(:user).order(:created_at).reverse_order.page(params[:page]).per(20)
     respond_to do |format|
       format.html
       format.js

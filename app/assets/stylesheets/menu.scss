@@ -9,7 +9,7 @@
   position: fixed;
 }
 
-.menu--logo {
+.menu__logo {
   background: $secundary;
   padding: $minor;
   
@@ -20,7 +20,7 @@
   }
 }
 
-.menu--pic {
+.menu__pic {
   margin: $minor auto;
   img {
     display: block;
@@ -31,19 +31,19 @@
   }
 }
 
-.menu--text {
+.menu__text {
   display: block;
   text-align: center;
   color: $white;
 }
 
-.menu--username {
+.menu__username {
   margin: $minor auto;
   text-transform: capitalize;
   font-size: $big;
 }
 
-.menu--bio {
+.menu__bio {
   margin: $minor 0 $medium 0;
   padding: 0 $minor;
   font-size: $medium-text;
@@ -62,11 +62,11 @@
     text-align: center;
     color: $white;
     font-size: $big;
-    margin: $micro auto $medium auto;
+    margin: $micro auto 0px auto;
   }
 }
 
-.menu--items {
+.menu__items {
   padding: 0px;
   list-style: none;
   text-align: left;

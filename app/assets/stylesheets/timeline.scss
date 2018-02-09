@@ -1,32 +1,16 @@
 @import 'variables';
 .timeline {
   border-right: 1px solid $light-gray;
-}
-
-.timeline__margin {
-  margin-left: $width-lateral-menu;
+  position: relative;
 }
 
 .timeline__header {
-  position: fixed;
+  position: sticky;
   border-bottom: 1px solid $light-gray;
   background: $white;
-}
-
-.timeline__menu {
-  width: 41.66%;
-}
-
-.mentions__menu {
-  width: 16.66%;
-}
-
-.timeline__grid {
-  width: 19.12%;
-}
-
-.trending__menu {
-  width:  19.12%;
+  left: 0;
+  right: 0;
+  top: 0;
 }
 
 .timeline__header i {
@@ -41,12 +25,12 @@
 }
 
 .timeline__tweets {
-  margin-top: 60px;
+  list-style: none;
   padding: 0px;
 }
 
-.timeline--list {
-  padding: $between 0px;
+.timeline__list {
+  padding: $between 0 $micro 0 ;
   border-bottom: 1px solid $light-gray;
 }
 
@@ -61,12 +45,42 @@
 
   li p {
     max-width: 80%;
-    padding: $minor;
+    padding: $micro $minor;
     margin: 0px;
   }
 }
 
-
 .pagination {
   display: none;
+}
+
+.timeline__trending {
+  position: fixed;
+  width: 100%;
+  list-style: none;
+  padding: 0px;
+  height: 100%;
+  margin: 0px;
+
+  li {
+    padding: $minor;
+    border-bottom: 1px solid $light-gray;
+  }
+}
+
+.timeline__trending-title {
+  color: $primary;
+  font-weight: bold;
+  font-size: $big;
+}
+
+.timeline__trending-description {
+  padding: $micro 0px;
+  color: $gray;
+  font-size: $medium-text;
+}
+
+.timeline__trending-people {
+  color: #cdcdcd;
+  font-size: $small;
 }

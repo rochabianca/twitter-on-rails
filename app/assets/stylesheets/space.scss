@@ -1,5 +1,17 @@
 @import 'variables';
 
+.space__menu {
+  margin-left: 240px;
+}
+
+.space__medium-top {
+  margin-top: $medium;
+}
+
+.space__major-top {
+  margin-top: $major;
+}
+
 .space__major-bottom {
   margin-bottom: $major;
 }

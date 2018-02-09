@@ -1,4 +1,4 @@
-// $(document).on('hover', 'timeline--list', function() {
+// $(document).on('hover', 'timeline__list', function() {
 //   setTimeout(function(){
 //     $(".button--actions").removeClass("display--none;")
 //   }, 800);

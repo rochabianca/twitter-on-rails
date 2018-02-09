@@ -1,10 +1,10 @@
 $primary: #81a9cc;
 $secundary: #6cc4f8;
-$font-color: #688fb3;
+$font-color: rgb(84, 107, 136);
 $option: #6c94b8;
 $option-font: #5BA8E2;
 
-$hover-links: #96D5F0;
+$hover-links: rgb(84, 107, 136);;
 
 $white: #fff;
 $black: #191C22;
@@ -25,7 +25,7 @@ $medium-text: 15px;
 $big: 20px;
 $bigger: 23px;
 
-$width-lateral-menu: 240px;
+$width-lateral-menu: 240px; //16.66%;//240px;
 
 // Box-sizing
 *, *::after, *::before {

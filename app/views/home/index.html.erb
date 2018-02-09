@@ -1,55 +1,60 @@
-<section class="menu menu__fixed">
-    <div class="menu--logo"><%= image_tag "twitter-logo.png", :class => "" %></div>
-    <div class="menu--profile">
-      <div class="menu--pic"><%= image_tag @rand_profile, :class => "" %></div>
-      <h3 class="menu--text menu--username">@<%= @user_username %></h3>
-      <p class="menu--text menu--bio"><%= Faker::TheFreshPrinceOfBelAir.quote %></p>
+<section class="grid__column grid__column--1 menu menu__fixed ">
+      <div class="menu__logo"><%= image_tag "twitter-logo.png", :class => "" %></div>
+      <div class="menu--profile">
+        <div class="menu__pic"><%= image_tag @rand_profile, :class => "" %></div>
+        <h3 class="menu__text menu__username">@<%= @user_username %></h3>
+        <p class="menu__text menu__bio"><%= Faker::TheFreshPrinceOfBelAir.quote %></p>
 
-      <section class="flex flex__center-content">
-        <div class="menu__info flex__items">
-            <b>Tweets</b>
-            <p><%=  current_user.tweets.count %></p>
-        </div>
+        <section class="flex flex__center-content">
+          <div class="menu__info flex__items">
+              <b>Tweets</b>
+              <p><%=  current_user.tweets.count %></p>
+          </div>
 
-        <div class="menu__info flex__items">
-            <b>Following</b>
-            <p><%= @user_following %></p>
-        </div>
+          <div class="menu__info flex__items">
+              <b>Following</b>
+              <p><%= @user_following %></p>
+          </div>
 
-        <div class="menu__info flex__items">
-            <b>Followers</b>
-            <p><%=  @user_followers %></p>
-        </div>
-      </section>
+          <div class="menu__info flex__items">
+              <b>Followers</b>
+              <p><%=  @user_followers %></p>
+          </div>
+        </section>
+<%# 
+        <section class="new-tweet">
+          <a href="#" id="open-tweet-model"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Tweet</li></a>
+        </section> %>
 
-      <section>
-        <ul class="menu--items flex space__major-bottom">
-          <%= link_to root_path do %>
-            <li><i class="fa fa-home"></i>Home</li>
-          <% end %>
-          <%= link_to root_path do %>
-          <li><i class="fa fa-at" aria-hidden="true"></i><span>Mentions</span></li>
-          <% end %>
-          <%= link_to edit_user_registration_path do %>
-          <li><i class="fa fa-user" aria-hidden="true"></i> <span>Profile</span></li>
-          <% end %>
-        </ul>
-      </section>
-
-      <footer class="menu__footer" id="menu__footer">
-          <ul class="essential__display-none animated menu__option" id="log-out-option">
-            <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => "" %></li>
+        <section>
+          <ul class="menu__items flex space__medium-top space__major-bottom">
+            <a class="new-tweet" href="#" id="open-tweet-model"><li><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Tweet</li></a>
+            <%= link_to root_path do %>
+              <li><i class="fa fa-home"></i>Home</li>
+            <% end %>
+            <%= link_to root_path do %>
+            <li><i class="fa fa-at" aria-hidden="true"></i><span>Mentions</span></li>
+            <% end %>
+            <%= link_to edit_user_registration_path do %>
+            <li><i class="fa fa-user" aria-hidden="true"></i> <span>Profile</span></li>
+            <% end %>
           </ul>
-          <p id="menu__footer-index"><i class="fa fa-cogs" aria-hidden="true"></i></p>
-      </footer>
+        </section>
+
+        <footer class="menu__footer" id="menu__footer">
+            <ul class="essential__display-none animated menu__option" id="log-out-option">
+              <li><%= link_to "Log Out", destroy_user_session_path, method: :delete, :class => "" %></li>
+            </ul>
+            <p id="menu__footer-index"><i class="fa fa-cogs" aria-hidden="true"></i></p>
+        </footer>
 
 
-    </div>
-  </section>
+      </div>
+    </section>
 
-<div class="grid">
-  <section class="grid__column grid__column--5 timeline timeline__margin">
-    <div class="timeline__header timeline__menu flex flex__content-space-between flex__align-center"><span></span><h3>Timeline</h3> <i class="fa fa-angle-down" aria-hidden="true"></i>
+<div class="grid space__menu">
+  <section class="grid__column grid__column--6 timeline timeline__margin">
+    <div class="timeline__header flex flex__content-space-between flex__align-center"><span></span><h3>Timeline</h3> <i class="fa fa-angle-down" aria-hidden="true"></i>
     </div>
 
     <ul class="timeline__tweets" id="timeline">
@@ -60,13 +65,22 @@
       </ul>
   </section>
 
-  <section class="grid__column grid__column--2 timeline">
-      <div class="timeline__header mentions__menu flex flex__content-space-between flex__align-center"><span></span><h3>Mentions</h3> <i class="fa fa-angle-down" aria-hidden="true"></i>
+  <section class="grid__column grid__column--4 timeline">
+      <div class="timeline__header flex flex__content-space-between flex__align-center"><span></span><h3>Mentions</h3> <i class="fa fa-angle-down" aria-hidden="true"></i>
       </div>
   </section>
 
-  <section class="grid__column grid__column--3 timeline">
-      <div class="timeline__header trending__menu flex flex__content-space-between flex__align-center"><span></span><h3>Trending</h3> <i class="fa fa-angle-down" aria-hidden="true"></i>
+  <section class="grid__column grid__column--2 timeline" id="trending">
+      <div class="timeline__header  flex flex__content-space-between flex__align-center"><span></span><h3>Trending</h3> <i class="fa fa-angle-down" aria-hidden="true"></i>
       </div>
+      <ul class="timeline__trending">
+          <% 10.times do |i| %>
+            <li>
+              <div class="timeline__trending-title"><%= Faker::Zelda.item %></div>
+              <div class="timeline__trending-description"><%= Faker::WorldOfWarcraft.quote %></div>
+              <div class="timeline__trending-people"><%= rand(4000) + 42 %> People tweeting about this</div>
+            </li>
+          <% end %>
+        </ul>
   </section>
 </div>

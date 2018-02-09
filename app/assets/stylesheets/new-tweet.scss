@@ -1,0 +1,9 @@
+@import 'variables';
+
+.new-tweet {
+    background: $secundary;
+    border-color: $font-color;
+    color: $white;
+    text-decoration: none;
+    font-weight: bold;
+}

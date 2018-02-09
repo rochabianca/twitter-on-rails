@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
   def index
     if User.exists?(username: params[:username])
       @user = User.where(username: params[:username]).first
-      @tweets_user = @user.tweets.order(:created_at).reverse_order.page(params[:page]).per(10);
+      @tweets_user = @user.tweets.order(:created_at).reverse_order.page(params[:page]).per(25);
       @count_tweets_user = @user.tweets.count;
       @following_user = (@user.following_links.count - 1) # follow id where user id = @user
       @followers_user = Follow.all.where(follower_id: @user.id).count
