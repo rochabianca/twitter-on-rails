@@ -1,4 +1,7 @@
-<section class="grid__column grid__column--1 menu menu__fixed ">
+
+<section class="grid__column grid__column--1 menu menu__fixed flex">
+
+    <div class="menu__menu">
       <div class="menu__logo"><%= image_tag "twitter-logo.png", :class => "" %></div>
       <div class="menu--profile">
         <div class="menu__pic"><%= image_tag @rand_profile, :class => "" %></div>
@@ -21,14 +24,10 @@
               <p><%=  @user_followers %></p>
           </div>
         </section>
-<%# 
-        <section class="new-tweet">
-          <a href="#" id="open-tweet-model"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Tweet</li></a>
-        </section> %>
 
         <section>
           <ul class="menu__items flex space__medium-top space__major-bottom">
-            <a class="new-tweet" href="#" id="open-tweet-model"><li><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Tweet</li></a>
+            <a class="menu__new-tweet" id="open-tweet-model"><li><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Tweet</li></a>
             <%= link_to root_path do %>
               <li><i class="fa fa-home"></i>Home</li>
             <% end %>
@@ -47,9 +46,27 @@
             </ul>
             <p id="menu__footer-index"><i class="fa fa-cogs" aria-hidden="true"></i></p>
         </footer>
-
-
       </div>
+    </div> <!-- fim div do menu -->
+
+    <div class="new-tweet essential__display-none"> <!-- aba tweet -->
+      <div class="new-tweet__header flex flex__content-space-between"><span>New Tweet</span> <span class="new-tweet__quit" id="new-tweet__quit">x</span></div>
+      <div class="space__major-top new-tweet__input">
+        <h3>From: @<%= @user_username %></h3>
+        <%= simple_form_for(Tweet.new, remote: true) do |f| %>
+          <%= f.input :content,as: :text, label: false, :error => false ,  placeholder: "What's happening?", input_html: {:rows => '5'} , :class => "",  autocomplete: "off"%>
+          <div class="space__minor-top flex flex__content-space-between flex__align-center">
+            <span class="caracteres"></span>
+            <button class="button button__tweet" id="sendTweet" type="submit">Tweet</button>
+          </div>
+          <% end %>
+      </div>
+    </div> <!-- fim aba tweet -->
+
+
+
+
+
     </section>
 
 <div class="grid space__menu">

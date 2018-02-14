@@ -1,9 +1,40 @@
 @import 'variables';
 
 .new-tweet {
+    background: $primary;
+    width: $width-lateral-menu;
+}
+
+.new-tweet__header {
     background: $secundary;
-    border-color: $font-color;
+    padding: $minor;
     color: $white;
-    text-decoration: none;
-    font-weight: bold;
+    font-size: $bigger;
+    text-align: center;
+}
+
+.new-tweet__quit {
+    cursor: pointer;
+    
+    &:hover {
+        color: $hover-links;
+    }
+}
+
+.new-tweet__input {
+    padding: 0px $minor;
+    h3 {
+        margin: 0px;
+        color: $white;
+        padding: $between 0;
+        font-weight: lighter;
+        font-size: $big;
+    }
+    textarea {
+        border-radius: 8px;
+    }
+}
+
+.caracteres {
+    color: $white;
 }

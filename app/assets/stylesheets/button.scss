@@ -1,0 +1,17 @@
+@import 'variables';
+
+.button {
+  padding: $between $minor;
+  color: $white;
+  border: none;
+  border-radius: 5px;
+}
+
+.button__tweet {
+  background: $secundary;
+}
+
+.button__disabled {
+  cursor: not-allowed;
+  background-color: rgb(229, 229, 229) !important;
+}

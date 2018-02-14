@@ -3,6 +3,17 @@
   background: $primary;
   width: $width-lateral-menu;
   height: 100%;
+  z-index: 999;
+}
+
+.menu__opened {
+  width: $width-lateral-menu*2;
+}
+
+.menu__menu {
+  width: $width-lateral-menu;
+  height: 100%;
+  border-right: 1px solid $option;
 }
 
 .menu__fixed {
@@ -146,4 +157,9 @@
 
 #menu__footer-index {
   z-index: 999;
+}
+
+.menu__new-tweet {
+  background: $secundary;
+  cursor: pointer;
 }
