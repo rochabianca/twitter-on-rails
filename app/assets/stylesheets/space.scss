@@ -4,8 +4,16 @@
   margin-left: 240px;
 }
 
+.space__between-bottom {
+  margin-bottom: $between;
+}
+
 .space__minor-top {
   margin-top: $minor;
+}
+
+.space__minor-bottom {
+  margin-bottom: $minor;
 }
 
 .space__medium-top {

@@ -5,9 +5,22 @@
   color: $white;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.button__block {
+  width: 100%;
+}
+
+.button__square {
+  border-radius: 0px;
 }
 
 .button__tweet {
+  background: $secundary;
+}
+
+.button__secundary {
   background: $secundary;
 }
 

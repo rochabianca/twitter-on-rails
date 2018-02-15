@@ -13,8 +13,16 @@
   justify-content: space-between;
 }
 
+.flex__content-flex-end {
+  justify-content: flex-end;
+}
+
 .flex__align-center {
   align-items: center;
+}
+
+.flex__align-baseline {
+  align-items: baseline;
 }
 
 .flex__items {

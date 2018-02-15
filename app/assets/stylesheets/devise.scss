@@ -1,113 +1,100 @@
 @import 'variables';
-
-
-.center {
-  margin: 0 auto;
-}
-
 .devise {
-  background: asset-url('bg-login-4.png')  center;
-  max-width: 100%;
-  background-attachment: fixed;
-  //background-size: cover;
-  background-color: $primary
+  background: $primary;
 }
 
-.downpad {
-  padding-bottom: 30px;
+.devise__presentation {
+  height: 100vh;
 }
 
-.space-to-center {
-  margin-top: 10%;
-  // -webkit-box-shadow: -4px 3px 40px -4px rgba(77,77,77,0.63);
-  // -moz-box-shadow: -4px 3px 40px -4px rgba(77,77,77,0.63);
-  // box-shadow: -4px 3px 40px -4px rgba(77,77,77,0.63);
-
-  @include d(s) {
-    margin-top: 15%;
-  }
+.devise__space {
+  padding-top: 15%;
 }
 
-.left-margin {
-  padding-left: 15px;
-  padding-right: 15px;
+.devise__space-input {
+  padding-top: 30%;
 }
 
-.space-field {
-  margin-bottom: 10px;
-
-  @include d(s) {
-    margin-bottom: 20px;
-  }
-}
-
-.links {
+.devise__title {
   color: $white;
-  font-size: 15px;
-  line-height: 1.4;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 50px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0px;
+  padding: $minor;
+}
+
+.devise__title-input {
+  color: $black;
+  font-size: $bigger;
+}
+
+.devise__info {
+  color: $white;
+  text-align: center;
+  margin: 0px;
+  padding-bottom: $minor;
+  font-size: $bigger;
+}
+.devise__top-links {
+  padding-right: $minor;
+}
+
+.devise__links {
+  color: $gray;
+  font-weight: lighter;
   text-decoration: none;
+  font-size: $big;
+  transition: 0.5 ease;
 
   &:hover {
     text-decoration: underline;
   }
 }
 
-hr.line {
-  border: none;
-  display: block;
-  height: 1px;
-  background: $light-gray;
-  margin: 0px;
-  margin-bottom: $between;
+.devise__inputs {
+  padding: 40% $medium;
 }
 
-h1 {
-  margin: 0px;
-  padding: 30px 0;
-  text-align: center;
+.devise__inputs-sing-up {
+  padding: 15% $medium;
+}
+
+.user_login label, .user_password label, .user_email label, .user_username label, .user_password_confirmation label {
   color: $black;
-}
-
-h2 {
-  margin: 0 auto;
-  text-align: center;
-  padding: 30px 0 30px 0;
-  color: $white;
-  text-transform: uppercase;
-  font-size: 25px;
-}
-
-
-.mobile-grid {
-  max-width: 90%;
-
-  @include d(m) {
-    max-width: 80%;
-  }
-}
-
-.grid__column--3 {
-  @include d(p) {
-    width: 55%;
-  }
-}
-
-label {
-  color: $white;
+  font-size: $big;
+  text-transform: capitalize;
   margin-bottom: $between;
 }
 
-.user_username, .user_email, .user_password, .user_password_confirmation {
-  margin-bottom: $between;
+.user_password label, .user_username label, .user_password_confirmation label {
+  margin-top: $minor;
 }
 
-.flex--sign-up {
-  display: flex;
+.user_login input, .user_password input, .user_email input, .user_username input, .user_password_confirmation input {
+  border: 1px solid $gray;
 
-  @include d(m) {
-    display: inline-block;
+  &:focus {
+    border-color: $primary;
   }
-  @include d(s) {
-    display: inline-block;
-  }
+}
+
+input#user_remember_me {
+  width: 15px;
+  height: 15px;
+  background: none;
+  border: 1px solid $secundary;
+  margin-right: $micro;
+}
+
+.devise__remember-me {
+  text-transform: capitalize;
+  color: $gray;
+  font-size: $medium-text;
+}
+
+abbr[title] {
+  display: none;
 }
