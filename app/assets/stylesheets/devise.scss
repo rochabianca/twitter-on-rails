@@ -39,18 +39,19 @@
   font-size: $bigger;
 }
 .devise__top-links {
-  padding-right: $minor;
+  margin-right: $minor;
 }
 
 .devise__links {
   color: $gray;
-  font-weight: lighter;
+  font-weight: normal;
   text-decoration: none;
   font-size: $big;
   transition: 0.5 ease;
 
   &:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid $gray;
+    // text-decoration: underline;
   }
 }
 

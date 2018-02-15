@@ -44,7 +44,7 @@
   }
 
   li p {
-    max-width: 80%;
+    max-width: 750px;
     padding: $micro $minor;
     margin: 0px;
   }
@@ -83,4 +83,30 @@
 .timeline__trending-people {
   color: #cdcdcd;
   font-size: $small;
+}
+
+.timeline__actions {
+  margin-left: $minor;
+
+  i {
+    font-size: $small;
+    color: $gray;
+    padding: $micro $between;
+    cursor: pointer;
+  }
+}
+
+.fa-retweet:hover {
+  transition: 0.5 ease;
+  color: $sucess;
+}
+
+.fa-heart-o:hover {
+  transition: 0.5 ease;
+  color: $danger;
+}
+
+.fa-comment-o:hover {
+  transition: 0.5 ease;
+  color: $primary;
 }

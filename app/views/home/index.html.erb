@@ -50,7 +50,7 @@
     </div> <!-- fim div do menu -->
 
     <div class="new-tweet essential__display-none"> <!-- aba tweet -->
-      <div class="new-tweet__header flex flex__content-space-between"><span>New Tweet</span> <span class="new-tweet__quit" id="new-tweet__quit">x</span></div>
+      <div class="new-tweet__header flex flex__content-space-between"><span>New Tweet</span> <span class="new-tweet__quit" id="new-tweet__quit">×</span></div>
       <div class="space__major-top new-tweet__input">
         <h3>From: @<%= @user_username %></h3>
         <%= simple_form_for(Tweet.new, remote: true) do |f| %>
@@ -63,11 +63,7 @@
       </div>
     </div> <!-- fim aba tweet -->
 
-
-
-
-
-    </section>
+</section>
 
 <div class="grid space__menu">
   <section class="grid__column grid__column--6 timeline timeline__margin">
@@ -100,4 +96,8 @@
           <% end %>
         </ul>
   </section>
-</div>
+</div> <!-- fim do grid -->
+
+<section class="grid__column grid__column--6 menu__fixed">
+  <h1>HEY</h1>
+</section>

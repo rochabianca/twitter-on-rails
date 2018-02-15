@@ -9,11 +9,18 @@
           <span class="profile__delete-tweet"><%= link_to '×', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></span>
         </div>
     </li>
-    <li><p>
+    <li>
+      <p>
         <%= auto_link(tweet.content, :html => { :target => '_blank' }) do |text| %>
         <% truncate(text, :length => 40) %>
         <% end %>
-      </p></li>
+      </p>
+      <div class="timeline__actions">
+        <i class="fa fa-comment-o" aria-hidden="true"></i>
+        <i class="fa fa-retweet" aria-hidden="true"></i>
+        <i class="fa fa-heart-o" aria-hidden="true"></i>
+      </div>
+    </li>
   </ul>
   
   </div>
