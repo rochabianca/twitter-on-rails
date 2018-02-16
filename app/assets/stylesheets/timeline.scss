@@ -24,9 +24,12 @@
   font-weight: lighter;
 }
 
+
 .timeline__tweets {
   list-style: none;
   padding: 0px;
+  height: 100vh;
+  overflow: auto;
 }
 
 .timeline__list {
@@ -61,6 +64,8 @@
   padding: 0px;
   height: 100%;
   margin: 0px;
+  height: 100vh;
+  overflow: auto;
 
   li {
     padding: $minor;

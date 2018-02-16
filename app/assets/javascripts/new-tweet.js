@@ -31,10 +31,12 @@ $(document).on('keyup paste', '#tweet_content', function() {
 
 $(document).on('click', '#open-tweet-model', function() {
   $('.menu').addClass('menu__opened').fadeIn('slow');
+  $('#open-tweet-model').addClass('tweet-opened');
   $('.new-tweet').removeClass('essential__display-none').fadeIn('slow');
 });
 
-$(document).on('click', '#new-tweet__quit, #sendTweet', function() {
+$(document).on('click', '#new-tweet__quit, #sendTweet, .tweet-opened', function() {
   $('.menu').removeClass('menu__opened');
   $('.new-tweet').addClass('essential__display-none');
+  $('#open-tweet-model').removeClass('tweet-opened');
 });

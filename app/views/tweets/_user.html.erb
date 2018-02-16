@@ -1,0 +1,31 @@
+
+<div class="profile__resume">
+<div class="text__align-right profile__quit"><span class="quit">×</span></div>
+    <div class="menu__pic profile--pic"><%= image_tag @rand_profile, :class => "" %></div>
+    <h3 class="menu__text menu__username">@<%= @user.username %></h3>
+    <p class="menu__text menu__bio profile--bio"><%= Faker::TheFreshPrinceOfBelAir.quote %></p>
+
+    <section class="flex flex__center-content">
+        <div class="menu__info flex__items">
+            <b>Tweets</b>
+            <p><%=  @user.tweets.count %></p>
+        </div>
+
+        <div class="menu__info flex__items">
+            <b>Following</b>
+            <p><%= (@user.following_links.count - 1) %></p>
+        </div>
+
+        <div class="menu__info flex__items">
+            <b>Followers</b>
+            <p><%=  Follow.all.where(follower_id: @user.id).count %></p>
+        </div>
+    </section>
+</div>
+
+<ul class="timeline__tweets" id="timeline">
+        <div class="timeline--page" id="timeline--tweets">
+          <%= render @tweets_user %>
+          <%= paginate @tweets_user %>
+        </div>
+</ul>

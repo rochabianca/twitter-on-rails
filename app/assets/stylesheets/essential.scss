@@ -1,7 +1,16 @@
+.essential {
+  max-height: 100vh;
+  overflow: hidden;
+}
+
 .essential__font {
   font-family: Helvetica, Arial, sans-serif;
 }
 
 .essential__display-none {
   display: none !important;
+}
+
+.essential__relative {
+  position: relative;
 }

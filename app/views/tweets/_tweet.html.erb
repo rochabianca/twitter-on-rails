@@ -5,7 +5,9 @@
   <ul class="timeline__tweet-content">
     <li>
       <div class="profile__username flex flex__content-space-between">
-          <span class="profile__user">@<%= tweet.user.username %></span>
+      <%# <%= link_to 'Change my password', edit_password_url(@resource, reset_password_token: @token) %>
+      <%# <a > @<%= tweet.user.username </a> %>
+          <span class="profile__user"><%= link_to "@#{tweet.user.username}", username_tweets_url(tweet.user.username), remote: true%></span>
           <span class="profile__delete-tweet"><%= link_to '×', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></span>
         </div>
     </li>

@@ -19,4 +19,5 @@
 //= require carousel
 //= require jquery.infinitescroll
 //= require tweets.coffee
+//= require show-profile.js
 //= require_tree .

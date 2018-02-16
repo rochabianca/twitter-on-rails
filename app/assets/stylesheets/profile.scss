@@ -18,9 +18,16 @@
   padding: 0px $between;
 }
 
-.profile__user {
+.profile__user a {
+  color: $black;
+  text-decoration: none;
   font-weight: bold;
   font-size: $medium-text;
+  cursor: pointer;
+
+  &:hover {
+    color: $hover-links;
+  }
 }
 
 .profile__delete-tweet a {
@@ -37,6 +44,42 @@
 }
 
 .profile__card {
-  left: 0;
   z-index: 999;
+}
+
+.profile__quit {
+  background: $primary;
+  color: $white;
+  
+
+  span {
+    padding: $micro $between;
+    cursor: pointer;
+    &:hover {
+      color: $hover-links;
+    }
+  }
+}
+
+#profile-card {
+  height: 100vh;
+  overflow: scroll;
+}
+
+
+.profile__resume {
+  position: sticky;
+  top: 0vh;
+  background: $primary;
+  padding: $micro 0 $minor 0;
+  border-bottom: 1px solid $option;
+}
+
+.profile--pic {
+  margin: $micro auto;
+}
+
+.profile--bio {
+  max-width: 300px;
+  margin: $minor auto $medium;
 }
