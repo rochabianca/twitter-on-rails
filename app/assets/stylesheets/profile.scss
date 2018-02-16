@@ -35,3 +35,8 @@
 .profile p {
   flex-direction: column;
 }
+
+.profile__card {
+  left: 0;
+  z-index: 999;
+}
