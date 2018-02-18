@@ -28,9 +28,12 @@
 .timeline__tweets {
   list-style: none;
   padding: 0px;
+}
+
+.timeline__scroll {
   height: 100vh;
   overflow: auto;
-}
+} 
 
 .timeline__list {
   padding: $between 0 $micro 0 ;
@@ -53,9 +56,9 @@
   }
 }
 
-.pagination {
-  display: none;
-}
+// .pagination {
+//   display: none;
+// }
 
 .timeline__trending {
   position: fixed;
@@ -71,6 +74,11 @@
     padding: $minor;
     border-bottom: 1px solid $light-gray;
   }
+
+}
+
+.timeline__trending li:last-child {
+  margin-bottom: $major;
 }
 
 .timeline__trending-title {

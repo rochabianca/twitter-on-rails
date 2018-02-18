@@ -70,13 +70,13 @@ namespace :sample_data do
 end
 
 namespace :sample_data do
-  desc "This task create new tweets"
+  desc "This task create new tweets for a specific user"
   task tweets_jovani: :environment do
 
     100.times do |f|
       Tweet.create!(
         :content => Faker::WorldOfWarcraft.quote,
-        :user_id => 14
+        :user_id => 2
       )
 
       puts "tweet from user Jovani created"
