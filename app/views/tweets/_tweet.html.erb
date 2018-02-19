@@ -7,8 +7,11 @@
       <div class="profile__username flex flex__content-space-between">
       <%# <%= link_to 'Change my password', edit_password_url(@resource, reset_password_token: @token) %>
       <%# <a > @<%= tweet.user.username </a> %>
-          <span class="profile__user"><%= link_to "@#{tweet.user.username}", username_tweets_url(tweet.user.username), remote: true%></span>
-          <span class="profile__delete-tweet"><%= link_to '×', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+          <span class="profile__user"><%= link_to "@#{tweet.user.username}",  users_show_url(tweet.user.username), remote: true %></span>
+
+          <% if current_user.username == tweet.user.username %>
+            <span class="profile__delete-tweet essential__display-none"><%= link_to '×', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+          <% end %>
         </div>
     </li>
     <li>
@@ -17,7 +20,7 @@
         <% truncate(text, :length => 40) %>
         <% end %>
       </p>
-      <div class="timeline__actions">
+      <div class="timeline__actions essential__display-none">
         <i class="fa fa-comment-o" aria-hidden="true"></i>
         <i class="fa fa-retweet" aria-hidden="true"></i>
         <i class="fa fa-heart-o" aria-hidden="true"></i>

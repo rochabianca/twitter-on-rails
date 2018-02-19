@@ -76,7 +76,7 @@ namespace :sample_data do
     100.times do |f|
       Tweet.create!(
         :content => Faker::WorldOfWarcraft.quote,
-        :user_id => 2
+        :user_id => 26
       )
 
       puts "tweet from user Jovani created"

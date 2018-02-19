@@ -20,4 +20,5 @@
 //= require jquery.infinitescroll
 //= require tweets.coffee
 //= require show-profile.js
+//= require tweet.js
 //= require_tree .

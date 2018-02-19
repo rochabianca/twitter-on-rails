@@ -1,5 +1,5 @@
 
-<div class="profile__resume">
+<div class="profile__resume ">
 <div class="text__align-right profile__quit"><span class="quit">×</span></div>
     <div class="menu__pic profile--pic"><%= image_tag @rand_profile, :class => "" %></div>
     <h3 class="menu__text menu__username">@<%= @user.username %></h3>
@@ -23,9 +23,11 @@
     </section>
 </div>
 
-<ul class="timeline__tweets" id="timeline__profile">
+<div class="">
+    <ul class="timeline__tweets" id="timeline__profile">
         <div class="timeline--page" id="timeline__profile-tweets">
-          <%= render @tweets_user %>
-          <%= paginate @tweets_user %>
+          <%= render $tweets_user %>
+          <%= paginate $tweets_user, params: {controller: 'tweets', action: 'tweets_user'} %>
         </div>
-</ul>
+    </ul>
+</div>

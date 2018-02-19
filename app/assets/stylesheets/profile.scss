@@ -61,11 +61,6 @@
   }
 }
 
-#profile-card {
-  height: 100vh;
-  overflow: scroll;
-}
-
 
 .profile__resume {
   position: sticky;
@@ -73,7 +68,7 @@
   background: $primary;
   padding: $micro 0 $minor 0;
   // border-bottom: 1px solid $option;
-  box-shadow: 0px 5px  20px #999;
+  box-shadow: 0px 3px  20px #bbb;
 }
 
 .profile--pic {

@@ -33,6 +33,7 @@
 .timeline__scroll {
   height: 100vh;
   overflow: auto;
+  overflow-x: hidden;
 } 
 
 .timeline__list {
@@ -57,8 +58,13 @@
 }
 
 // .pagination {
-//   display: none;
-// }
+//    display: none;
+//  }
+
+ .timeline__status p {
+   font-size: $small;
+   color: $gray;
+ }
 
 .timeline__trending {
   position: fixed;
@@ -106,6 +112,10 @@
     color: $gray;
     padding: $micro $between;
     cursor: pointer;
+  }
+
+  i:first-child {
+    padding-left: 0px;
   }
 }
 

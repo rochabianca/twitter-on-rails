@@ -75,7 +75,13 @@
           <%= render @tweets %>
           <%= paginate @tweets %>
         </div>
+
       </ul>
+      <div class="timeline__status text__align-center">
+      <p class="infinite-scroll-error">Something went wrong!</p>
+        <p class="infinite-scroll-last">There is no more tweets to load :(</p>
+         
+      </div>
   </section>
 
   <section class="grid__column grid__column--4 timeline" id="mentions">
@@ -97,9 +103,8 @@
         </ul>
   </section>
 
-  <section class="grid__column grid__column--6 essential__relative profile__card essential__display-none" id="profile-card">
+  <section class="grid__column grid__column--6 essential__relative profile__card essential__display-none timeline__scroll" id="profile-card">
     <div id="profile_card-content"> loading </div>
-    </div>
 
   </section>
 </div> <!-- fim do grid -->
