@@ -1,11 +1,13 @@
 @import 'variables';
 .profile {
-  padding-left: $minor;
+  margin-left: $minor;
 }
 
-.profile__pic img {
-  
+.profile__pic {
+  flex-grow: 0;
+  display: block;
   width: 61px;
+  height: 61px;
   flex-grow: 0;
   border-radius: 50%;
 }
@@ -30,7 +32,9 @@
   }
 }
 
-.profile__delete-tweet a {
+.profile__delete-tweet {
+  margin-right: $between;
+  display: inline;
   text-decoration: none;
   color: $gray;
   transition: 0.5s ease;

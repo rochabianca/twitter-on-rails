@@ -1,0 +1,9 @@
+
+<div class="">
+    <div class="timeline__tweets" id="timeline__profile">
+        <div class="timeline--page" id="timeline__profile-tweets">
+          <%= render @tweets %>
+          <%= paginate @tweets, params: {controller: 'tweets', action: 'tweets_user'} %>
+        </div>
+    </div>
+</div>

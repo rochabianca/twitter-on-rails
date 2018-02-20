@@ -1,0 +1,15 @@
+$('#mentions').addClass('essential__display-none').fadeIn('slow');
+$('#trending').addClass('essential__display-none').fadeIn('slow');
+$('#profile-card').removeClass('essential__display-none').fadeIn('slow');
+$('#profile_card-content').html("<%= j render 'user' %>");
+
+$("#timeline__profile .timeline--page").infiniteScroll({
+  path: "#timeline__profile nav.pagination a[rel=next]",
+  append: ".timeline__list",
+  elementScroll: "#profile-card",
+  status: '#timeline__profile .timeline__status',
+  debug: true,
+});
+
+console.log('show')
+   
