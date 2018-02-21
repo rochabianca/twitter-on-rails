@@ -1,0 +1,39 @@
+@import 'variables';
+
+.trending {
+  position: fixed;
+  width: 100%;
+  list-style: none;
+  padding: 0px;
+  height: 100%;
+  margin: 0px;
+  height: 100vh;
+  overflow: auto;
+
+  li {
+    padding: $minor;
+    border-bottom: 1px solid $light-gray;
+  }
+
+}
+
+.trending li:last-child {
+  margin-bottom: $major;
+}
+
+.trending__name {
+  color: $primary;
+  font-weight: bold;
+  font-size: $big;
+}
+
+.trending__description {
+  padding: $micro 0px;
+  color: $gray;
+  font-size: $medium-text;
+}
+
+.trending__talkabout {
+  color: #cdcdcd;
+  font-size: $small;
+}

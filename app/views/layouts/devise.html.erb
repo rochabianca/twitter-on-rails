@@ -4,34 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Devise</title>
+    <title>Login - TweetDesk</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <%= flash_messages class: 'alert' %>
-  <div class="grid devise__presentation">
-  
-    <%= yield %>
-  </div>
+    <header>
+      <%= flash_messages class: 'alert' %>
+    </header>
 
-  </body>
-</html>
-
-<%# <div class="grid center">
-    <div class="grid__column grid__column--12">
-      <% if notice >
-        <p class="alert alert-success animated slideInDown"><%= notice ></p>
-      <% end >
+    <div class="grid devise__presentation">
+      <%= yield %>
     </div>
     
-    <div class="grid__column grid__column--12">
-      <% if alert >
-        <p class="alert alert-danger animated slideInDown"><%= alert ></p>
-      <% end >
-    </div>
-  
-  </div>
- %>
+  </body>
+</html>

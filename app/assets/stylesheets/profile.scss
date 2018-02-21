@@ -20,12 +20,13 @@
   padding: 0px $between;
 }
 
-.profile__user a {
+.profile__user {
   color: $black;
   text-decoration: none;
   font-weight: bold;
   font-size: $medium-text;
   cursor: pointer;
+  margin-left: $minor;
 
   &:hover {
     color: $hover-links;
@@ -48,14 +49,13 @@
 }
 
 .profile__card {
-  z-index: 999;
+  z-index: 3;
 }
 
 .profile__quit {
   background: $primary;
   color: $white;
   
-
   span {
     padding: $micro $between;
     cursor: pointer;
@@ -65,13 +65,11 @@
   }
 }
 
-
 .profile__resume {
   position: sticky;
   top: 0vh;
   background: $primary;
   padding: $micro 0 $minor 0;
-  // border-bottom: 1px solid $option;
   box-shadow: 0px 3px  20px #bbb;
 }
 

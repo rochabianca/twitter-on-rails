@@ -1,0 +1,44 @@
+@import 'variables';
+
+.account__pic {
+  margin: $medium auto $between auto;
+  display: block;
+  width: 80px;
+  border-radius: 40px;
+  border: 2px solid $white;
+}
+
+.account__text {
+  display: block;
+  text-align: center;
+  color: $white;
+}
+
+.account__username {
+  margin: 0 auto $between auto;
+  text-transform: capitalize;
+  font-size: $big;
+}
+
+.account__bio {
+  margin: 0 0 $medium 0;
+  padding: 0 $minor;
+  font-size: $medium-text;
+}
+
+.account__info {
+  b {
+    font-size: $medium-text;
+    color: $font-color;
+
+    @include d(m) {
+      font-size: $small;
+    }
+  }
+  p {
+    text-align: center;
+    color: $white;
+    font-size: $big;
+    margin: $micro auto 0px auto;
+  }
+}

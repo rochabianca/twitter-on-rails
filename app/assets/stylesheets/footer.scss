@@ -1,0 +1,49 @@
+@import 'variables';
+
+.footer__menu {
+  position: fixed;
+  bottom: 0;
+  background: $primary;
+  display: block;
+  width: $width-lateral-menu;
+  cursor: pointer;
+
+  p {
+    margin: 0px;
+    z-index: 3;
+  }
+  i {
+    text-align: center;
+    color: $white;
+    font-size: $medium;
+    display: block;
+    background: $secundary;
+    padding: $minor;
+  }
+  ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    background: $white;
+  }
+}
+
+.footer__menu ul li {
+  border: 1px solid $primary;
+  padding: 15px;
+  text-align: center;
+
+  a {
+    color: $font-color;
+    font-weight: lighter;
+    text-decoration: none;
+
+    &:hover {
+      color: $hover-links;
+    }
+  }
+}
+
+#footer__menu-index {
+  z-index: 2;
+}

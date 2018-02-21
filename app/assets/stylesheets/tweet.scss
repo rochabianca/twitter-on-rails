@@ -1,0 +1,49 @@
+@import 'variables';
+
+.tweet {
+  padding: $between 0 $micro 0 ;
+  border-bottom: 1px solid $light-gray;
+}
+
+.tweet__content {
+  max-width: 100%;
+  width: 100%;
+  padding: 0px;
+  word-wrap: break-word;
+  
+  p {
+    max-width: 750px;
+    padding: $micro $minor;
+    margin: 0px;
+  }
+}
+
+.tweet__actions {
+  margin-left: $minor;
+
+  i {
+    font-size: $small;
+    color: $gray;
+    padding: $micro $between;
+    cursor: pointer;
+  }
+
+  i:first-child {
+    padding-left: 0px;
+  }
+}
+
+.fa-retweet:hover {
+  transition: 0.5 ease;
+  color: $sucess;
+}
+
+.fa-heart-o:hover {
+  transition: 0.5 ease;
+  color: $danger;
+}
+
+.fa-comment-o:hover {
+  transition: 0.5 ease;
+  color: $primary;
+}

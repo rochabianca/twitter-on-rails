@@ -1,46 +1,46 @@
 <div class="grid__column grid__column--8 devise devise__presentation devise__space">
   <div class="owl-carousel owl-theme">
-      <div class="item">
-        <%= image_tag "log-in-logo.png", :class => "image-caroulsel" %>
-        <h1 class=" space__minor-top devise__title">You Never Imagined<br>Such a beautiful Twitter</h1>
-        <p class="devise__info">Come see this wonderful web app made for you, <br> who loves beautiful design and great experience.</p>
-      </div>
-
-      <div class="item">
-          <%= image_tag "log-in-logo.png", :class => "image-caroulsel" %>
-          <h1 class=" space__medium-top devise__title">You Never Imagined<br>Such a beautiful Twitter</h1>
-          <p class="devise__info">Come see this wonderful web app made for you, <br> who loves beautiful design and great experience.</p>
-      </div>
-      
-      <div class="item">
-          <%= image_tag "log-in-logo.png", :class => "image-caroulsel" %>
-          <h1 class=" space__medium-top devise__title">You Never Imagined<br>Such a beautiful Twitter</h1>
-          <p class="devise__info">Come see this wonderful web app made for you, <br> who loves beautiful design and great experience.</p>
-      </div>
+    <div class="item">
+      <%= image_tag "log-in-logo.png", :class => "image-caroulsel" %>
+      <h1 class=" space__minor-top devise__title">You Never Imagined<br>Such a beautiful Twitter</h1>
+      <p class="devise__info">Come see this wonderful web app made for you, <br> who loves beautiful design and great experience.</p>
     </div>
+
+    <div class="item">
+        <%= image_tag "log-in-logo.png", :class => "image-caroulsel" %>
+        <h1 class=" space__medium-top devise__title">You Never Imagined<br>Such a beautiful Twitter</h1>
+        <p class="devise__info">Come see this wonderful web app made for you, <br> who loves beautiful design and great experience.</p>
+    </div>
+    
+    <div class="item">
+        <%= image_tag "log-in-logo.png", :class => "image-caroulsel" %>
+        <h1 class=" space__medium-top devise__title">You Never Imagined<br>Such a beautiful Twitter</h1>
+        <p class="devise__info">Come see this wonderful web app made for you, <br> who loves beautiful design and great experience.</p>
+    </div>
+  </div>
 </div>
 
 <div class="grid__column grid__column--4">
-    <div class="text__align-right space__minor-top flex flex__content-flex-end">
-        <%- if controller_name != 'sessions' %>
-        <%= link_to "Log in", new_session_path(resource_name), :class => "devise__links devise__top-links" %><br />
-      <% end -%>
-      
-      <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-        <%= link_to "Sign up", new_registration_path(resource_name), :class => "devise__links devise__top-links" %><br />
-      <% end -%>
-    </div>
+  <div class="text__align-right space__minor-top flex flex__content-flex-end">
+    <%- if controller_name != 'sessions' %>
+      <%= link_to "Log in", new_session_path(resource_name), :class => "devise__links devise__top-links" %><br />
+    <% end -%>
+  
+    <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+      <%= link_to "Sign up", new_registration_path(resource_name), :class => "devise__links devise__top-links" %><br />
+    <% end -%>
+  </div>
 
-    <div class=" devise__inputs">
-      <h2 class="devise__title-input">Forgot your password?</h2>
-      <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <div class=" devise__inputs">
+    <h2 class="devise__title-input">Forgot your password?</h2>
+    <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
 
       <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Your Email" %>
-    
+  
       <div class="space__minor-bottom space__minor-top">
-      <%= f.submit "Send me reset password instructions", :class => "button button__block button__secundary button__square" %>
+        <%= f.submit "Send me reset password instructions", :class => "button button__block button__secundary button__square" %>
       </div>
     <% end %>
     <%= render "devise/shared/links" %>
-    </div>
   </div>
+</div>

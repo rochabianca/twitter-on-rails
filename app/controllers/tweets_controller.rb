@@ -1,30 +1,10 @@
 class TweetsController < ApplicationController
-
   def index
-    @rand_profile = "profile-#{rand(4)}.png" # Neste caso eu copiei a mesma variável usada no home_controller. Como aproveitar variáveis entre mais de um controller ou model?
-  end
-
-  def user_show
-    @user = User.where(username: params[:username]).first
-    @tweets_user = @user.tweets.order(:created_at).reverse_order.page(params[:page]).per(25);
-    @count_tweets_user = @user.tweets.count;
-    @following_user = (@user.following_links.count - 1) # follow id where user id = @user
-    @followers_user = Follow.all.where(follower_id: @user.id).count
-
-    respond_to do |format|
-      format.html
-      format.js
-    end
   end
 
   def tweets_user
     @user = User.find_by_username(params[:username])
     @tweets = @user.tweets.ordered.page(params[:page]).per(25);
-
-    respond_to do |format|
-      format.html
-      format.js
-    end
   end
 
   def create
@@ -37,13 +17,8 @@ class TweetsController < ApplicationController
     Tweet.find(params[:id]).destroy
   end
 
-  def not_found
-  end
-
   protected
-
   def resource_params
     params.require(:tweet).permit([:content])
   end
-
 end

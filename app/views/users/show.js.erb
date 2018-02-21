@@ -1,15 +1,20 @@
 $('#mentions').addClass('essential__display-none').fadeIn('slow');
 $('#trending').addClass('essential__display-none').fadeIn('slow');
 $('#profile-card').removeClass('essential__display-none').fadeIn('slow');
+$('#profile-card').addClass('slideInRight');
 $('#profile_card-content').html("<%= j render 'user' %>");
+
+$(document).on('click', '.quit', function() {
+  $('#profile-card').addClass('essential__display-none').fadeOut('slow');
+  $('#mentions').removeClass('essential__display-none');
+  $('#trending').removeClass('essential__display-none');
+  $('.profile__user').removeClass('profile__opened');
+});
 
 $("#timeline__profile .timeline--page").infiniteScroll({
   path: "#timeline__profile nav.pagination a[rel=next]",
-  append: ".timeline__list",
+  append: ".tweet",
   elementScroll: "#profile-card",
   status: '#timeline__profile .timeline__status',
   debug: true,
 });
-
-console.log('show')
-   

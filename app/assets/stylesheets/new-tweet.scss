@@ -1,16 +1,26 @@
 @import 'variables';
 
 .new-tweet {
-    background: $primary;
-    width: $width-lateral-menu;
+  background: $primary;
+  width: $width-lateral-menu;
+  z-index: 1;
+}
+
+.new-tweet__menu {
+  background: $secundary;
+  cursor: pointer;
 }
 
 .new-tweet__header {
-    background: $secundary;
-    padding: $minor;
-    color: $white;
+  background: $secundary;
+  padding: $minor;
+  color: $white;
+  font-size: $bigger;
+  text-align: center;
+  h3 {
     font-size: $bigger;
-    text-align: center;
+    margin: 0px;
+  }
 }
 
 .new-tweet__quit {

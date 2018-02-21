@@ -1,9 +1,10 @@
 @import 'variables';
+
 .menu {
   background: $primary;
   width: $width-lateral-menu;
   height: 100%;
-  z-index: 999;
+  z-index: 3;
 }
 
 .menu__opened {
@@ -14,10 +15,8 @@
   width: $width-lateral-menu;
   height: 100%;
   border-right: 1px solid $option;
-}
-
-.menu__fixed {
-  position: fixed;
+  background: $primary;
+  z-index: 2;
 }
 
 .menu__logo {
@@ -31,135 +30,35 @@
   }
 }
 
-.menu__pic {
-  margin: $minor auto;
-  img {
-    display: block;
-    width: 80px;
-    border-radius: 40px;
-    border: 2px solid $white;
-    margin: 0 auto;
-  }
-}
-
-.menu__text {
-  display: block;
-  text-align: center;
-  color: $white;
-}
-
-.menu__username {
-  margin: $minor auto;
-  text-transform: capitalize;
-  font-size: $big;
-}
-
-.menu__bio {
-  margin: $minor 0 $medium 0;
-  padding: 0 $minor;
-  font-size: $medium-text;
-}
-
-.menu__info {
-  b {
-    font-size: $medium-text;
-    color: $font-color;
-
-    @include d(m) {
-      font-size: $small;
-    }
-  }
-  p {
-    text-align: center;
-    color: $white;
-    font-size: $big;
-    margin: $micro auto 0px auto;
-  }
-}
-
 .menu__items {
   padding: 0px;
   list-style: none;
   text-align: left;
   flex-flow: column nowrap;
+
   a {
+    display: block;
     text-decoration: none;
-    &:last-child {
-      border-bottom: 1px solid $option;
-    }
-  }
-  li {
     color: $white;
     font-size: $big;
     font-weight: lighter;
     padding: $between 0;
     border-top: 1px solid $option;
-  }
-  li:hover{
-    color: $hover-links;
-  }
-  li i {
-    padding: 0 $minor 0 $medium;
-  }
-}
 
-.menu__footer {
-  position: fixed;
-  bottom: 0;
-  background: $primary;
-  display: block;
-  width: $width-lateral-menu;
-  cursor: pointer;
-  
-}
+    i {
+      padding: 0 $minor 0 $medium;
+    }
 
-.menu__footer p {
-  margin: 0px;
-  z-index: 999;
-}
-
-.menu__footer i {
-  text-align: center;
-  color: $white;
-  font-size: $medium;
-  display: block;
-  background: $secundary;
-  padding: $minor;
-  
-}
-
-.menu__footer ul {
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-  background: $white;
-}
-
-.menu__footer ul li {
-  border: 1px solid $primary;
-  padding: 15px;
-  text-align: center;
-
-  a {
-    color: $font-color;
-    font-weight: lighter;
-    text-decoration: none;
-
-    &:hover {
+    &:hover{
       color: $hover-links;
     }
+  }
+
+  li:last-child {
+    border-bottom: 1px solid $option;
   }
 }
 
 .menu__option {
   z-index: -1;
-}
-
-#menu__footer-index {
-  z-index: 999;
-}
-
-.menu__new-tweet {
-  background: $secundary;
-  cursor: pointer;
 }

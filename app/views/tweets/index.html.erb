@@ -1,41 +1,8 @@
-<div class="grid space--minor-top ">
-  <div class="container flex flex--wrap flex--flex-start">
-    <div class="grid__column grid__column--3 only-desktop divider--minor-right">
-      
-      <div class="profile-card bg--pic divider--minor-bottom divider--medium-top flex--center text--center left-margin">
-        <%= image_tag @rand_profile, :class => "profile-card--image" %>
-        <div class="profile-card--user">
-          <h3 class="profile-card--username"> <%= @user.username %> </h3>
-          <p class="profile-card--quote"> <%= Faker::TheFreshPrinceOfBelAir.quote %> </p>
-        </div>
-      </div>
-
-      <div class="flex profile-card--followers bg--white space--minor-bottom profile-card--border">
-        <ul>
-          <li>Tweets</li>
-          <li><%=  @count_tweets_user %></li>
-        </ul>
-
-        <ul>
-          <li>Following</li>
-          <li><%= @following_user %></li>
-        </ul>
-        
-        <ul>
-          <li>Followers</li>
-          <li><%= @followers_user %></li>
-        </ul>
-      </div>
+<div>
+  <div class="timeline"  id="timeline--profile">
+    <div class="timeline--page"  id="timeline--tweets--profile">
+      <%= render @tweets %> 
+      <%= paginate @tweets %>
     </div>
-
-    <div class="grid__column grid__column--9 bg--white left-margin">
-        <ul class="timeline"  id="timeline--profile">
-          <div class="timeline--page"  id="timeline--tweets--profile">
-            <%= render @tweets %> 
-            <%= paginate @tweets %>
-          </div>
-        </ul>
-      </div>
-
   </div>
-</div>
+</div>    

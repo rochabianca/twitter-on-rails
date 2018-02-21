@@ -8,9 +8,6 @@ $(document).on('turbolinks:load', function () {
 $(document).on('keyup paste', '#tweet_content', function() {
   setTimeout(function() {
   var valorTextarea = $('#tweet_content').val().length,
-      // palavras = $('#tweet_content').val().split(' ').length;
-
-  // totalCaracteres = (140-valorTextarea+palavras-1);
   totalCaracteres = (140-valorTextarea);
 
   if (totalCaracteres < 16) {
@@ -23,8 +20,7 @@ $(document).on('keyup paste', '#tweet_content', function() {
     $('.caracteres').removeClass('text--danger');
     $('.button__tweet').removeClass('button__disabled');
   }
-
-
+  
   $('.caracteres').text(totalCaracteres);
   }, 200)
 });
@@ -32,6 +28,7 @@ $(document).on('keyup paste', '#tweet_content', function() {
 $(document).on('click', '#open-tweet-model', function() {
   $('.menu').addClass('menu__opened').fadeIn('slow');
   $('#open-tweet-model').addClass('tweet-opened');
+  $('.new-tweet').addClass('slideInLeft');
   $('.new-tweet').removeClass('essential__display-none').fadeIn('slow');
 });
 
