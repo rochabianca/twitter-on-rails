@@ -6,6 +6,11 @@
   background: $white;
 }
 
+.tweet__username-tag {
+  color: $gray;
+  text-decoration: none;
+}
+
 .tweet__content {
   max-width: 100%;
   width: 100%;
@@ -23,7 +28,7 @@
   margin-left: $minor;
 
   i {
-    font-size: $small;
+    font-size: 15px;
     color: $gray;
     padding: $micro $between;
     cursor: pointer;
@@ -32,6 +37,10 @@
   i:first-child {
     padding-left: 0px;
   }
+}
+
+.fa-retweet {
+  font-size: 17px !important;
 }
 
 .fa-retweet:hover {

@@ -11,15 +11,20 @@
   left: 0;
   right: 0;
   top: 0;
+  display: block;
+  padding: 15px 0;
+  text-align: center;
 }
 
 .timeline__header i {
   padding-right: $between;
+  position: absolute;
+  top: 20px;
+  right: 0;
 }
 
 .timeline__header h3 {
   margin: 0px;
-  padding: $minor;
   font-size: $bigger;
   font-weight: lighter;
 }

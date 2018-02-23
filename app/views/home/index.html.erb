@@ -84,8 +84,7 @@
 
 <div class="grid space__menu">
   <section class="grid__column grid__column--6 timeline timeline__margin timeline__scroll">
-    <div class="timeline__header flex flex__content-space-between flex__align-center essential__shadow">
-      <span></span>
+    <div class="timeline__header essential__shadow">
       <h3>Timeline</h3>
       <i class="fa fa-angle-down" aria-hidden="true"></i>
     </div>
@@ -99,13 +98,12 @@
     
     <div class="timeline__status text__align-center">
       <p class="infinite-scroll-error">Something went wrong!</p>
-      <p class="infinite-scroll-last">There is no more tweets to load :(</p>   
+      <p class="infinite-scroll-last">There is no more tweets to show :(</p>   
     </div>
   </section>
 
   <section class="grid__column grid__column--4 timeline" id="mentions">
     <div class="timeline__header flex flex__content-space-between flex__align-center essential__shadow">
-      <span></span>
       <h3>Mentions</h3>
       <i class="fa fa-angle-down" aria-hidden="true"></i>
     </div>
@@ -113,7 +111,6 @@
 
   <section class="grid__column grid__column--2 timeline" id="trending">
     <div class="timeline__header  flex flex__content-space-between flex__align-center essential__shadow ">
-      <span></span>
       <h3>Trending</h3>
       <i class="fa fa-angle-down" aria-hidden="true"></i>
     </div>
@@ -130,7 +127,8 @@
   </section>
 
   <section class="grid__column grid__column--6 essential__relative profile__card essential__display-none timeline__scroll animated" id="profile-card">
-    <div id="profile_card-content"> loading </div>
+    <div class="profile__loading">LOADING</div> <!-- ESSA DIV TA ACIMA DA PROFILE CARD CONTENT, POR ISSO N APARECE -->
+    <div id="profile_card-content"></div>
   </section>
 </div> <!-- fim do grid -->
 

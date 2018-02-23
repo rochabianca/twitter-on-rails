@@ -19,6 +19,9 @@
     display: block;
     background: $secundary;
     padding: $minor;
+    &:hover {
+      color: $hover-links;
+    }
   }
   ul {
     list-style: none;
@@ -37,10 +40,6 @@
     color: $font-color;
     font-weight: lighter;
     text-decoration: none;
-
-    &:hover {
-      color: $hover-links;
-    }
   }
 }
 

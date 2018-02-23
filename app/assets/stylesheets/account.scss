@@ -15,9 +15,19 @@
 }
 
 .account__username {
-  margin: 0 auto $between auto;
+  margin: 0 auto $micro auto;
   text-transform: capitalize;
   font-size: $big;
+}
+
+.account__username-tag {
+  margin: 0 auto;
+  font-size: $small;
+  color: $light-gray;
+  text-transform: lowercase;
+  padding-top: $micro;
+  text-align: center;
+  padding: 0px;
 }
 
 .account__bio {

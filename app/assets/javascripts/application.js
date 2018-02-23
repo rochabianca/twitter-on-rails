@@ -18,6 +18,6 @@
 //= require carousel
 //= require jquery.infinitescroll
 //= require tweets.coffee
-
+//= require users.js
 //= require tweet.js
 //= require_tree .
