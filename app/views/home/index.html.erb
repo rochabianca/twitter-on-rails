@@ -127,8 +127,11 @@
   </section>
 
   <section class="grid__column grid__column--6 essential__relative profile__card essential__display-none timeline__scroll animated" id="profile-card">
-    <div class="profile__loading">LOADING</div> <!-- ESSA DIV TA ACIMA DA PROFILE CARD CONTENT, POR ISSO N APARECE -->
-    <div id="profile_card-content"></div>
+    <div class="loading">
+    <%= image_tag "loading.gif" %>
+    <h2>LOADING</h2>
+    </div> <!-- ESSA DIV TA ACIMA DA PROFILE CARD CONTENT, POR ISSO N APARECE -->
+    <div class="essential__display-none" id="profile_card-content"></div>
   </section>
 </div> <!-- fim do grid -->
 

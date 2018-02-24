@@ -1,0 +1,9 @@
+@import 'variables';
+
+.loading {
+  z-index: 7;
+  height: 100vh;
+  // background: asset-url('loading.gif') no-repeat;
+  background-color: $white;
+  background-position: top center;
+}

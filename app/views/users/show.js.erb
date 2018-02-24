@@ -1,3 +1,5 @@
+$('.loading').addClass('essential__display-none')
+$('#profile_card-content').removeClass('essential__display-none')
 $('#profile_card-content').html("<%= j render 'user' %>");
 $('.profile__loading').addClass('essential__display-none');
 
@@ -8,6 +10,7 @@ $(document).on('click', '.quit, .profile__bg', function() {
   $('#trending').removeClass('essential__display-none');
   $('.profile__user').removeClass('profile__opened');
   $('.profile__loading').removeClass('essential__display-none');
+  $('.loading').removeClass('essential__display-none')
 });
 
 $("#timeline__profile .timeline--page").infiniteScroll({
