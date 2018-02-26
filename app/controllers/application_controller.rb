@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
   before_action :load_image
 
   protected
-
   def configure_permitted_parameters
     added_attrs = [:username, :email, :password, 
                    :password_confirmation, :remember_me]

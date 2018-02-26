@@ -7,7 +7,6 @@
 }
 
 .new-tweet__menu {
-  background: $secundary;
   cursor: pointer;
 }
 
@@ -40,9 +39,7 @@
         font-weight: lighter;
         font-size: $big;
     }
-    textarea {
-        border-radius: 8px;
-    }
+
 }
 
 .caracteres {

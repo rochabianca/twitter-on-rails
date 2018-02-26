@@ -1,0 +1,16 @@
+<div class="timeline__header essential__shadow">
+  <h3>Timeline</h3>
+  <i class="fa fa-angle-down" aria-hidden="true"></i>
+</div>
+
+<div class="timeline__tweets" id="timeline">
+  <div class="timeline--page" id="timeline--tweets">
+    <%= render @tweets %>
+    <%= paginate @tweets %>
+  </div>
+</div>
+
+<div class="timeline__status text__align-center">
+  <p class="infinite-scroll-error">Something went wrong!</p>
+  <p class="infinite-scroll-last">There is no more tweets to show :(</p>   
+</div>

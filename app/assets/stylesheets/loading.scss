@@ -3,7 +3,79 @@
 .loading {
   z-index: 7;
   height: 100vh;
-  // background: asset-url('loading.gif') no-repeat;
   background-color: $white;
   background-position: top center;
+}
+
+.loading__pic {
+  height: 80px;
+  background: $white;
+}
+
+.loading__element {
+  display: block;
+  margin: $micro auto;
+  width: 40px;
+  height: 5px;
+  border-radius: 5px;
+  background: $white;
+  padding: 1px;
+}
+
+.loading__element-name {
+  width: 50px;
+  height: 10px;
+  border-radius: 10px;
+  padding: 1px;
+  margin-bottom: 13px;
+  margin-top: 10px;
+}
+
+.loading__element-smaller {
+  height: 6px;
+}
+
+.loading__element-multiply {
+  width: 200px;
+  height: 6px;
+  padding: 1px;
+  margin-top: $between;
+  margin-bottom: 20px;
+  &::after {
+    content: '';
+    display: block;
+    margin: 12px auto;
+    width: 140px;
+    height: 6px;
+    border-radius: 5px;
+    background: $white;
+    padding: 1px;
+  }
+}
+
+.loading__element-multiply-3 {
+  margin: 12px auto;
+  width: 90px;
+  height: 6px;
+  margin-bottom: $medium;
+}
+
+.loading__text {
+  color: $gray;
+  font-size: $medium-text;
+  text-align: center;
+  padding-left: $minor;
+}
+
+.loading__timeline {
+  margin-top: $between;
+}
+
+.loading__gif {
+  width: 40px
+}
+
+.loading__element__small {
+  width: 20px;
+  margin: 15px auto;
 }

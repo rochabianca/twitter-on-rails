@@ -43,7 +43,7 @@
     font-size: $big;
     font-weight: lighter;
     padding: $between 0;
-    border-top: 1px solid $option;
+    // border-top: 1px solid $option;
 
     i {
       padding: 0 $minor 0 $medium;
@@ -54,11 +54,11 @@
     }
   }
 
-  li:last-child {
-    border-bottom: 1px solid $option;
+  li:first-child {
+    border-top: 1px solid $option;
   }
 }
 
 .menu__option {
-  z-index: -1;
+  z-index: 1;
 }

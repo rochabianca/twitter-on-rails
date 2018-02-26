@@ -1,11 +1,10 @@
-
 <section class="profile__resume ">
   <div class="text__align-right profile__quit">
     <span class="quit">×</span>
   </div>
 
   <%= image_tag @rand_profile, :class => "account__pic profile--pic" %>
-  <h3 class="account__text account__username"><%= @user.username %></h3>
+  <h1 class="account__text account__username"><%= @user.username %></h1>
   <h4 class="account__username-tag">@<%= @user.username %></h4>
   <p class="account__text account__bio profile--bio"><%= Faker::TheFreshPrinceOfBelAir.quote %></p>
 
@@ -16,7 +15,7 @@
     </div>
     <div class="account__info flex__items">
       <b>Following</b>
-      <p><%= (@user.following_links.count - 1) %></p>
+      <p><%= @user.following_links.count - 1 %></p>
     </div>
     <div class="account__info flex__items">
       <b>Followers</b>

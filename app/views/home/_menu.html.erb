@@ -1,0 +1,59 @@
+<div class="menu__logo essential__shadow--dark ">
+  <%= image_tag "twitter-logo.png" %>
+</div>
+
+<div class="menu--profile">
+  <%= image_tag @rand_profile, :class => "account__pic" %>
+  <h3 class="account__text account__username">@<%= current_user.username %></h3>
+  <p class="account__text account__bio"><%= Faker::TheFreshPrinceOfBelAir.quote %></p>
+
+  <section class="flex flex__center-content">
+    <div class="account__info flex__items">
+        <b>Tweets</b>
+        <p><%=  current_user.tweets.count %></p>
+    </div>
+
+    <div class="account__info flex__items">
+        <b>Following</b>
+        <p><%= @follow_user.count - 1 %></p>
+    </div>
+
+    <div class="account__info flex__items">
+        <b>Followers</b>
+        <p><%= @followed_user.count %></p>
+    </div>
+  </section>
+
+  <section>
+    <ul class="menu__items flex space__medium-top space__major-bottom">
+      <li>
+        <a class="new-tweet__menu" id="open-tweet-model">
+          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Tweet
+        </a>
+      </li>
+      <li>
+        <%= link_to root_path do %>
+          <i class="fa fa-home">
+          </i>Home
+        <% end %>
+      </li>
+      <li>
+        <%= link_to root_path do %>
+        <i class="fa fa-at" aria-hidden="true"></i>Mentions
+        <% end %>
+      </li>
+      <li>
+        <%= link_to edit_user_registration_path do %>
+          <i class="fa fa-user" aria-hidden="true"></i>Profile
+        <% end %>
+      </li>
+    </ul>
+  </section>
+
+  <footer class="footer__menu" id="footer__menu">
+    <ul class="essential__display-none animated menu__option" id="log-out-option">
+      <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+    </ul>
+    <p id="footer__menu-index"><i class="fa fa-cogs" aria-hidden="true"></i></p>
+  </footer>
+</div>

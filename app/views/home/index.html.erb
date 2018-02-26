@@ -1,138 +1,33 @@
 
 <section class="grid__column grid__column--1 menu essential__fixed flex">
   <div class="menu__menu">
-    <div class="menu__logo essential__shadow--dark ">
-      <%= image_tag "twitter-logo.png" %>
-    </div>
+    <%= render "/home/menu" %>
+  </div>
 
-    <div class="menu--profile">
-      <%= image_tag @rand_profile, :class => "account__pic" %>
-      <h3 class="account__text account__username">@<%= current_user.username %></h3>
-      <p class="account__text account__bio"><%= Faker::TheFreshPrinceOfBelAir.quote %></p>
-
-      <section class="flex flex__center-content">
-        <div class="account__info flex__items">
-            <b>Tweets</b>
-            <p><%=  current_user.tweets.count %></p>
-        </div>
-
-        <div class="account__info flex__items">
-            <b>Following</b>
-            <p><%= @follow_user.count - 1 %></p>
-        </div>
-
-        <div class="account__info flex__items">
-            <b>Followers</b>
-            <p><%= @followed_user.count %></p>
-        </div>
-      </section>
-
-      <section>
-        <ul class="menu__items flex space__medium-top space__major-bottom">
-          <li>
-            <a class="new-tweet__menu" id="open-tweet-model">
-              <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Tweet
-            </a>
-          </li>
-          <li>
-            <%= link_to root_path do %>
-              <i class="fa fa-home">
-              </i>Home
-            <% end %>
-          </li>
-          <li>
-            <%= link_to root_path do %>
-            <i class="fa fa-at" aria-hidden="true"></i>Mentions
-            <% end %>
-          </li>
-          <li>
-            <%= link_to edit_user_registration_path do %>
-              <i class="fa fa-user" aria-hidden="true"></i>Profile
-            <% end %>
-          </li>
-        </ul>
-      </section>
-
-      <footer class="footer__menu" id="footer__menu">
-          <ul class="essential__display-none animated menu__option" id="log-out-option">
-            <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-          </ul>
-          <p id="footer__menu-index"><i class="fa fa-cogs" aria-hidden="true"></i></p>
-      </footer>
-    </div>
-  </div> <!-- fim div do menu -->
-
-  <div class="new-tweet essential__display-none animated"> <!-- aba tweet -->
-    <div class="new-tweet__header flex flex__content-space-between">
-      <h3>New Tweet</h3>
-      <span class="new-tweet__quit" id="new-tweet__quit">×</span>
-    </div>
-    <div class="space__major-top new-tweet__input">
-      <h3>From: @<%= @user_username %></h3>
-
-      <%= simple_form_for(Tweet.new, remote: true) do |f| %>
-        <%= f.input :content,as: :text, label: false, :error => false ,  placeholder: "What's happening?", input_html: {:rows => '5'},  autocomplete: "off"%>
-
-        <div class="space__minor-top flex flex__content-space-between flex__align-center">
-          <span class="caracteres"></span>
-          <button class="button button__tweet" id="sendTweet" type="submit">Tweet</button>
-        </div>
-      <% end %>
-    </div>
+  <div class="new-tweet essential__display-none animated">
+    <%= render "/home/new-tweet" %>
   </div>
 </section>
 
 <div class="grid space__menu">
   <section class="grid__column grid__column--6 timeline timeline__margin timeline__scroll">
-    <div class="timeline__header essential__shadow">
-      <h3>Timeline</h3>
-      <i class="fa fa-angle-down" aria-hidden="true"></i>
-    </div>
-
-    <div class="timeline__tweets" id="timeline">
-      <div class="timeline--page" id="timeline--tweets">
-        <%= render @tweets %>
-        <%= paginate @tweets %>
-      </div>
-    </div>
-    
-    <div class="timeline__status text__align-center">
-      <p class="infinite-scroll-error">Something went wrong!</p>
-      <p class="infinite-scroll-last">There is no more tweets to show :(</p>   
-    </div>
+    <%= render "home/timeline" %>
   </section>
 
   <section class="grid__column grid__column--4 timeline" id="mentions">
-    <div class="timeline__header flex flex__content-space-between flex__align-center essential__shadow">
-      <h3>Mentions</h3>
-      <i class="fa fa-angle-down" aria-hidden="true"></i>
-    </div>
+    <%= render "/home/mentions" %>
   </section>
 
   <section class="grid__column grid__column--2 timeline" id="trending">
-    <div class="timeline__header  flex flex__content-space-between flex__align-center essential__shadow ">
-      <h3>Trending</h3>
-      <i class="fa fa-angle-down" aria-hidden="true"></i>
-    </div>
-
-    <ul class="trending">
-      <% 10.times do |i| %>
-        <li>
-          <div class="trending__name"><%= Faker::Zelda.item %></div>
-          <div class="trending__description"><%= Faker::WorldOfWarcraft.quote %></div>
-          <div class="trending__talkabout"><%= rand(4000) + 42 %> People tweeting about this</div>
-        </li>
-      <% end %>
-      </ul>
+    <%= render "/home/trending" %>
   </section>
 
   <section class="grid__column grid__column--6 essential__relative profile__card essential__display-none timeline__scroll animated" id="profile-card">
     <div class="loading">
-    <%= image_tag "loading.gif" %>
-    <h2>LOADING</h2>
-    </div> <!-- ESSA DIV TA ACIMA DA PROFILE CARD CONTENT, POR ISSO N APARECE -->
+      <%= render "/home/loading" %> 
+    </div>
     <div class="essential__display-none" id="profile_card-content"></div>
   </section>
-</div> <!-- fim do grid -->
+</div>
 
 <div class="profile__bg essential__display-none animated"></div>

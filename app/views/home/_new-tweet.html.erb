@@ -1,0 +1,16 @@
+<div class="new-tweet__header flex flex__content-space-between essential__shadow--dark">
+  <h3>New Tweet</h3>
+  <span class="new-tweet__quit" id="new-tweet__quit">×</span>
+</div>
+
+<div class="space__major-top new-tweet__input">
+  <h3>From: @<%= @user_username %></h3>
+
+  <%= simple_form_for(Tweet.new, remote: true) do |f| %>
+    <%= f.input :content,as: :text, label: false, :error => false ,  placeholder: "What's happening?", input_html: {:rows => '5'},  autocomplete: "off"%>
+    <div class="space__minor-top flex flex__content-space-between flex__align-center">
+      <span class="caracteres"></span>
+      <button class="button button__tweet" id="sendTweet" type="submit">Tweet</button>
+    </div>
+  <% end %>
+</div>
