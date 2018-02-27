@@ -2,32 +2,35 @@
 
 .footer__menu {
   position: fixed;
-  bottom: 0;
-  background: $primary;
+  bottom: 45px;
   display: block;
-  width: $width-lateral-menu;
   cursor: pointer;
+  width: $width-lateral-menu;
 
   p {
     margin: 0px;
-    z-index: 3;
+    z-index: 5;
+    background: $primary;
+    color: $white;
+    z-index: 5;
+    font-size: $big;
+
+    &:hover {
+      background: $secundary;
+    }
   }
   i {
-    text-align: center;
+    text-align: left;
     color: $white;
-    font-size: $medium;
-    display: block;
-    background: $secundary;
-    padding: $minor;
-    &:hover {
-      color: $hover-links;
-    }
+    display: inline-block;
+    padding: $minor $minor $minor $medium;
   }
   ul {
     list-style: none;
     margin: 0px;
     padding: 0px;
     background: $white;
+    z-index: 1;
   }
 }
 
@@ -43,6 +46,28 @@
   }
 }
 
-#footer__menu-index {
-  z-index: 2;
+.footer__footer {
+  width: $width-lateral-menu;
+  padding: $minor;
+  margin: 0px;
+  font-size: $small;
+  position: absolute;
+  bottom: 0px;
+  border-top: 1px solid $option;
+  color: $light-gray;
+  text-align: center;
+  background: $primary;
+
+  i {
+    color:  #F92D3F;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }

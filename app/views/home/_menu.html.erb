@@ -33,27 +33,31 @@
       </li>
       <li>
         <%= link_to root_path do %>
-          <i class="fa fa-home">
-          </i>Home
+          <i class="fa fa-search" aria-hidden="true"></i>Search
         <% end %>
       </li>
       <li>
         <%= link_to root_path do %>
-        <i class="fa fa-at" aria-hidden="true"></i>Mentions
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>Messages
         <% end %>
       </li>
       <li>
-        <%= link_to edit_user_registration_path do %>
-          <i class="fa fa-user" aria-hidden="true"></i>Profile
-        <% end %>
+       
       </li>
     </ul>
   </section>
 
-  <footer class="footer__menu" id="footer__menu">
+  <div class="footer__menu" id="footer__menu">
     <ul class="essential__display-none animated menu__option" id="log-out-option">
+      <li><%= link_to "Profile", edit_user_registration_path %></li>
       <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
     </ul>
-    <p id="footer__menu-index"><i class="fa fa-cogs" aria-hidden="true"></i></p>
+    <p id="footer__menu-index">
+      <i class="fa fa-cogs" aria-hidden="true"></i>Options
+    </p>
+  </div>
+
+  <footer>
+    <p class="footer__footer">Made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://github.com/rochabianca" target="_blank">Bianca Rocha</a></p>
   </footer>
 </div>

@@ -13,7 +13,7 @@
 
           <% if current_user.username == tweet.user.username %>
             <div>
-              <%= link_to '×', tweet, method: :delete, data: { confirm: 'Are you sure?' }, class: "profile__delete-tweet essential__display-none animated" %>
+              <%= link_to '×', tweet, method: :delete, data: { confirm: 'Are you sure?' }, class: "profile__delete-tweet essential__display-none animated", remote: true %>
             </div>
           <% end %>
         </div>

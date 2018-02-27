@@ -23,6 +23,17 @@
     padding: $micro $minor;
     margin: 0px;
     font-size: $medium-text;
+
+    a {
+      color: $secundary;
+      text-decoration: none;
+      &:visited {
+        color: $primary;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 

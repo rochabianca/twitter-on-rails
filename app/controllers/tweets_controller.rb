@@ -14,7 +14,7 @@ class TweetsController < ApplicationController
   end
 
   def destroy
-    Tweet.find(params[:id]).destroy
+    @tweet = Tweet.find(params[:id]).destroy
   end
 
   protected
