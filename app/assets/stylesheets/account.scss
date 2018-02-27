@@ -15,7 +15,7 @@
 }
 
 .account__username {
-  margin: 0 auto $micro auto;
+  margin: 0 auto $between auto;
   text-transform: capitalize;
   font-size: $big;
 }
@@ -40,10 +40,7 @@
   b {
     font-size: $medium-text;
     color: $font-color;
-
-    @include d(m) {
-      font-size: $small;
-    }
+    font-weight: bold;
   }
   p {
     text-align: center;
@@ -51,4 +48,5 @@
     font-size: $big;
     margin: $micro auto 0px auto;
   }
+  border-right: 1px solid $option;
 }

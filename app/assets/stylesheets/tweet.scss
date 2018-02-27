@@ -4,6 +4,7 @@
   padding: $between 0 $micro 0 ;
   border-bottom: 1px solid $light-gray;
   background: $white;
+  font-weight: 400;
 }
 
 .tweet__username-tag {
@@ -21,6 +22,7 @@
     max-width: 750px;
     padding: $micro $minor;
     margin: 0px;
+    font-size: $medium-text;
   }
 }
 
