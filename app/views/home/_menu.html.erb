@@ -7,7 +7,7 @@
   <h3 class="account__text account__username">@<%= current_user.username %></h3>
   <p class="account__text account__bio"><%= Faker::TheFreshPrinceOfBelAir.quote %></p>
 
-  <section class="flex flex__center-content">
+  <section class="flex flex__center-content account__divider">
     <div class="account__info flex__items">
         <b>Tweets</b>
         <p><%=  current_user.tweets.count %></p>
@@ -25,7 +25,7 @@
   </section>
 
   <section>
-    <ul class="menu__items flex space__medium-top space__major-bottom">
+    <ul class="menu__items flex space__major-bottom">
       <li>
         <a class="new-tweet__menu" id="open-tweet-model">
           <i class="fa fa-pencil-square-o" aria-hidden="true"></i>Tweet

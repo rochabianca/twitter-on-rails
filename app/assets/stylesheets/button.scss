@@ -18,6 +18,7 @@
 
 .button__tweet {
   background: $secundary;
+  font-weight: bold;
 }
 
 .button__secundary {
@@ -27,4 +28,5 @@
 .button__disabled {
   cursor: not-allowed;
   background-color: rgb(229, 229, 229) !important;
+  color: $gray;
 }

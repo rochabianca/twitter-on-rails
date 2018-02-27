@@ -1,3 +1,4 @@
 $('textarea#tweet_content.text.optional').val('');
 $('#timeline--tweets').prepend("<%= j render @tweet %>");
 $("#tweet__<%= @tweet.id %>").hide().fadeIn(1000);
+$('.caracteres').text(140);

@@ -12,36 +12,41 @@
 
 .new-tweet__header {
   background: $secundary;
-  padding: $minor;
+  padding: 12px $minor;
   color: $white;
   font-size: $bigger;
   text-align: center;
   h3 {
     font-size: $bigger;
     margin: 0px;
+    font-weight: 400;
   }
 }
 
 .new-tweet__quit {
-    cursor: pointer;
-    
-    &:hover {
-        color: $hover-links;
-    }
+  cursor: pointer;
+  
+  &:hover {
+      color: $hover-links;
+  }
 }
 
 .new-tweet__input {
-    padding: 0px $minor;
-    h3 {
-        margin: 0px;
-        color: $white;
-        padding: $between 0;
-        font-weight: lighter;
-        font-size: $big;
-    }
-
+  padding: 0px $minor;
+  h3 {
+      margin: 0px;
+      color: $white;
+      padding: $between 0;
+      font-weight: lighter;
+      font-size: $big;
+  }
 }
 
 .caracteres {
-    color: $white;
+  color: $white;
+}
+
+.new-tweet__caracters {
+  font-size: $medium-text;
+  color: $white;
 }

@@ -14,7 +14,7 @@
 .menu__menu {
   width: $width-lateral-menu;
   height: 100%;
-  border-right: 1px solid $option;
+  // border-right: 1px solid $option;
   background: $primary;
   z-index: 2;
 }
@@ -35,13 +35,14 @@
   list-style: none;
   text-align: left;
   flex-flow: column nowrap;
+  margin-top: 0px;
 
   a {
     display: block;
     text-decoration: none;
     color: $white;
     font-size: $big;
-    font-weight: lighter;
+    // font-weight: lighter;
     padding: $between 0;
     // border-top: 1px solid $option;
 
@@ -50,13 +51,13 @@
     }
 
     &:hover{
-      color: $hover-links;
+      background: $secundary;
     }
   }
 
-  li:first-child {
-    border-top: 1px solid $option;
-  }
+  // li:first-child {
+  //   border-top: 1px solid $option;
+  // }
 }
 
 .menu__option {
