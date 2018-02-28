@@ -33,13 +33,6 @@
 
 .new-tweet__input {
   padding: 0px $minor;
-  h3 {
-      margin: 0px;
-      color: $white;
-      padding: $between 0;
-      font-weight: lighter;
-      font-size: $big;
-  }
 }
 
 .caracteres {
@@ -49,4 +42,31 @@
 .new-tweet__caracters {
   font-size: $medium-text;
   color: $white;
+}
+
+.new-tweet__pic {
+  width: 60px;
+  margin: 0px;
+  border-width: 2px;
+  flex-grow: 0;
+}
+
+.new-tweet__account {
+  padding-left: $minor;
+  color: $white;
+  h4 {
+    margin: 0px;
+    font-weight: normal;
+    font-size: $medium-text;
+    color: $light-gray;
+  }
+  h3 {
+    margin: 0px;
+    color: $white;
+    padding: 0;
+    font-weight: bold;
+    font-size: $big;
+    text-transform: capitalize;
+    display: inline-block;
+}
 }

@@ -4,7 +4,13 @@
 </div>
 
 <div class="space__major-top new-tweet__input">
-  <h3>From: @<%= current_user.username %></h3>
+  <div class="flex flex__align-center space__minor-bottom">
+    <%= image_tag @rand_profile, :class => "account__pic new-tweet__pic"%>
+    <div class="new-tweet__account">
+      <h3><%= current_user.username %></h3>
+      <h4>@<%= current_user.username %></h4>
+    </div>
+  </div>
 
   <%= simple_form_for(Tweet.new, remote: true) do |f| %>
     <%= f.input :content,as: :text, label: false, :error => false ,  placeholder: "What's happening?", input_html: {:rows => '5'},  autocomplete: "off"%>

@@ -1,0 +1,54 @@
+@import 'variables';
+
+.edit-profile {
+  margin: 0 auto;
+
+  label {
+    color: $black;
+    font-size: $big;
+    text-transform: capitalize;
+    margin-bottom: $between;
+  }
+  input {
+    margin-bottom: $between;
+    border: 1px solid $light-gray;
+    &:focus {
+      border-color: $primary;
+    }
+  }
+}
+
+.edit-profile__title {
+  text-align: center;
+  color: $white;
+  font-weight: normal;
+  margin: $medium auto $major auto;
+}
+
+.edit-profile__pic {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-top: -40px;
+  z-index: 8;
+}
+.edit-profile__center {
+  margin: 0 auto;
+}
+
+.edit-profile__footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: $minor;
+  a {
+    cursor: pointer;
+    color: $gray;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

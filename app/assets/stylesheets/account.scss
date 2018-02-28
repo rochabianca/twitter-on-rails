@@ -15,10 +15,17 @@
   font-weight: bold;
 }
 
-.account__username {
-  margin: 0 auto $micro auto;
+.account__name {
+  margin: 0;
   text-transform: capitalize;
   font-size: $big;
+}
+
+.account__username {
+  margin: 0 auto $micro auto;
+  font-weight: normal;
+  font-size: $medium-text;
+  color: $light-gray;
 }
 
 .account__username-tag {
@@ -39,18 +46,18 @@
 }
 
 .account__info {
-  // padding-top: $minor;
-  // border-top: 1px solid $option;
   b {
-    font-size: $medium-text;
-    color: $font-color;
-    font-weight: bold;
+    font-weight: 400;
+    text-transform: uppercase; 
+    font-size: $small;
+    color: $light-gray;
   }
   p {
     text-align: center;
     color: $white;
     font-size: $big;
-    margin: $micro auto 0px auto;
+    margin: 0 auto;
+    font-weight: bold;
   }
 }
 

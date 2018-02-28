@@ -1,0 +1,47 @@
+<section class="profile__resume">
+  <h1 class="edit-profile__title">Edit User</h1>
+   <%= image_tag @rand_profile, class: "account__pic edit-profile__pic" %>
+</section>
+
+<section class="edit-profile grid__column grid__column--6 space__minor-top">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+    <label>Email</label>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+    <% end %>
+
+    <label>Change Password</label>
+    <%= f.password_field :password, autocomplete: "off", placeholder: "New password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm new password" %>
+
+    <label>Confirm Changes</label>
+    <%= f.password_field :current_password, autocomplete: "off", placeholder: "Current password" %>
+
+    <div class="space__minor-top space__minor-bottom">
+      <%= f.submit "Save Changes", class: "button button__block button__secundary button__square" %>
+    </div>
+  <% end %>
+</section>
+
+<!-- <section class="text__align-center">
+  <div class="edit-profile__danger-zone">
+    <h2>Danger Zone</h2>
+  </div>
+  
+  <div class="grid__column grid__column--3 edit-profile__center">
+    <h3>Cancel my account</h3>
+    <p>Once you cancel your account, there is no coming back. Are you sure?</p> 
+    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "space__minor-top button button__block button__square button__danger" %>
+  </div>
+
+</section> -->
+
+<footer class="edit-profile__footer">
+  <a>Cancel my account</a>
+  <div class="edit-profile__danger-zone flex flex__align-center flex__content-space-between">
+    <p>Once you cancel your account, there is no coming back. Are you sure?</p>
+    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "space__minor-top button  button__square button__danger" %>
+  </div>
+</footer>
