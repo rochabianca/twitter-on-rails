@@ -14,10 +14,13 @@
 //= require turbolinks
 //= require jquery-3.3.1.min
 //= require owl.carousel.min
+//= require functions.js
 //= require new-tweet.js
 //= require carousel
 //= require jquery.infinitescroll
 //= require tweets.coffee
 //= require users.js
 //= require tweet.js
+//= require devise-edit.js
+//= require edit-profile.js
 //= require_tree .

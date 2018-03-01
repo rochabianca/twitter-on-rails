@@ -25,22 +25,9 @@
   <% end %>
 </section>
 
-<!-- <section class="text__align-center">
-  <div class="edit-profile__danger-zone">
-    <h2>Danger Zone</h2>
-  </div>
-  
-  <div class="grid__column grid__column--3 edit-profile__center">
-    <h3>Cancel my account</h3>
-    <p>Once you cancel your account, there is no coming back. Are you sure?</p> 
-    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "space__minor-top button button__block button__square button__danger" %>
-  </div>
-
-</section> -->
-
 <footer class="edit-profile__footer">
-  <a>Cancel my account</a>
-  <div class="edit-profile__danger-zone flex flex__align-center flex__content-space-between">
+  <a class="cancel-account">Cancel my account</a>
+  <div class="essential__display-none animated edit-profile__danger-zone flex flex__align-center flex__content-space-between">
     <p>Once you cancel your account, there is no coming back. Are you sure?</p>
     <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "space__minor-top button  button__square button__danger" %>
   </div>

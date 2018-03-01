@@ -1,18 +1,9 @@
-$('.loading').addClass('essential__display-none')
-$('#profile_card-content').removeClass('essential__display-none')
+openContent()
 $('#profile_card-content').html("<%= j render 'user' %>");
 
 $('.profile__loading').addClass('essential__display-none');
 
-$(document).on('click', '.quit, .profile__bg', function() {
-  $('#profile-card').addClass('essential__display-none').fadeOut('slow');
-  $('.profile__bg').addClass('essential__display-none').fadeOut(500);
-  $('#mentions').removeClass('essential__display-none');
-  $('#trending').removeClass('essential__display-none');
-  $('.profile__user').removeClass('profile__opened');
-  $('.profile__loading').removeClass('essential__display-none');
-  $('.loading').removeClass('essential__display-none')
-});
+$(document).on('click', '.quit, .profile__bg', closeModal);
 
 $("#timeline__profile .timeline--page").infiniteScroll({
   path: "#timeline__profile nav.pagination a[rel=next]",

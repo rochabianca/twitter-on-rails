@@ -4,8 +4,4 @@ $(document).on('click', '#footer__menu', function() {
   $('#log-out-option').removeClass('essential__display-none');
 })
 
-$(document).on('click', '.opened-menu', function() {
-  $('#footer__menu').removeClass('opened-menu');
-  $('#log-out-option').addClass('essential__display-none').fadeIn('slow');
-  
-})
+$(document).on('click', '.opened-menu', closeFooter)
