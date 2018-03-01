@@ -1,14 +1,16 @@
-<div class="timeline__header  flex flex__content-space-between flex__align-center essential__shadow ">
-  <h3>Trending</h3>
-  <i class="fa fa-angle-down" aria-hidden="true"></i>
-</div>
+<section class="grid__column grid__column--4 timeline" id="trending">
+  <div class="timeline__header  flex flex__content-space-between flex__align-center essential__shadow ">
+    <h3>Trending</h3>
+    <i class="fa fa-angle-down" aria-hidden="true"></i>
+  </div>
 
-<ul class="trending">
-  <% 10.times do |i| %>
-    <li>
-      <div class="trending__name"><%= Faker::Zelda.item %></div>
-      <div class="trending__description"><%= Faker::WorldOfWarcraft.quote %></div>
-      <div class="trending__talkabout"><%= rand(4000) + 42 %> People tweeting about this</div>
-    </li>
-  <% end %>
-</ul>
+  <ul class="trending">
+    <% 10.times do |i| %>
+      <li>
+        <div class="trending__name"><%= Faker::Zelda.item %></div>
+        <div class="trending__description"><%= Faker::WorldOfWarcraft.quote %></div>
+        <div class="trending__talkabout"><%= rand(4000) + 42 %> People tweeting about this</div>
+      </li>
+    <% end %>
+  </ul>
+</section>

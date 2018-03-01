@@ -1,34 +1,38 @@
-<section class="profile__resume">
+<section class="profile__resume edit-profile__header">
   <h1 class="edit-profile__title">Edit User</h1>
    <%= image_tag @rand_profile, class: "account__pic edit-profile__pic" %>
 </section>
 
-<section class="edit-profile grid__column grid__column--6 space__minor-top">
+<section class="edit-profile  space__major-top">
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
     <label>Email</label>
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
     <% end %>
+   
 
-    <label>Change Password</label>
+    <h2 class="edit-profile__section">Password</h2>
+    <hr class="essential__line space__minor-bottom">
     <%= f.password_field :password, autocomplete: "off", placeholder: "New password" %>
     <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "Confirm new password" %>
 
-    <label>Confirm Changes</label>
+    <h2 class="edit-profile__section space__major-top">Confirm Changes</h2>
+    <hr class="essential__line space__minor-bottom">
     <%= f.password_field :current_password, autocomplete: "off", placeholder: "Current password" %>
 
     <div class="space__minor-top space__minor-bottom">
       <%= f.submit "Save Changes", class: "button button__block button__secundary button__square" %>
     </div>
   <% end %>
+
+  <h2 class="edit-profile__section space__major-top">Cancel your account</h2>
+  <hr class="essential__line space__minor-bottom">
+  <div class="animated edit-profile__danger-zone flex flex__align-center flex__content-space-between">
+    <p>Once you cancel your account, there is no coming back. Please be certain</p>
+    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "space__minor-top button  button__square button__danger edit-profile__button" %>
+  </div>
+
 </section>
 
-<footer class="edit-profile__footer">
-  <a class="cancel-account">Cancel my account</a>
-  <div class="essential__display-none animated edit-profile__danger-zone flex flex__align-center flex__content-space-between">
-    <p>Once you cancel your account, there is no coming back. Are you sure?</p>
-    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "space__minor-top button  button__square button__danger" %>
-  </div>
-</footer>

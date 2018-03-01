@@ -1,8 +1,10 @@
-$(document).on('mouseenter', '.tweet', function() {
-  $('.profile__delete-tweet', this).removeClass('essential__display-none').fadeIn('slow');
-  $('.profile__delete-tweet', this).addClass('fadeInDown');
-});
+$(document).on('mouseenter', '.tweet', showDeleteOption);
+$(document).on('mouseleave', '.tweet', hideDeleteOption);
 
-$(document).on('mouseleave', '.tweet', function() {
-  $('.profile__delete-tweet', this).addClass('essential__display-none').fadeIn('slow')
-});
+function showDeleteOption() {
+  $('.profile__delete-tweet', this).removeClass('essential__display-none').fadeIn(800).addClass('fadeInDown');
+}
+
+function hideDeleteOption() {
+  $('.profile__delete-tweet', this).addClass('essential__display-none').fadeOut(800)
+}

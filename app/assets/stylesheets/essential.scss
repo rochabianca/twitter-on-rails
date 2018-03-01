@@ -42,3 +42,11 @@
 .essential__no-margin {
   margin: 0px;
 }
+
+.essential__line {
+  margin: 0px;
+  border: none;
+  height: 1px;
+  width: 100%;
+  background: $light-gray;
+}

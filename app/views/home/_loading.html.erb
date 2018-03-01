@@ -1,33 +1,35 @@
-<section class="profile__resume ">
-  <div class="text__align-right profile__quit">
-    <span class="quit">×</span>
-  </div>
+<div class="loading">
+  <section class="profile__resume ">
+    <div class="text__align-right profile__quit">
+      <span class="quit">×</span>
+    </div>
 
-  <div class="loading__pic account__pic profile--pic">
-  </div>
-  
-  <h3 class="loading__element loading__element-name"></h3>
-  <h4 class="loading__element loading__element-smaller"></h4>
-  <p class="loading__element loading__element-multiply"></p>
-  <span class="loading__element loading__element-multiply-3"></span>
+    <div class="loading__pic account__pic profile--pic">
+    </div>
+    
+    <h3 class="loading__element loading__element-name"></h3>
+    <h4 class="loading__element loading__element-smaller"></h4>
+    <p class="loading__element loading__element-multiply"></p>
+    <span class="loading__element loading__element-multiply-3"></span>
 
-  <div class="flex flex__center-content">
-    <div class="account__info flex__items">
-      <b>Tweets</b>
+    <div class="flex flex__center-content">
+      <div class="account__info flex__items">
+        <b>Tweets</b>
+          <span class="loading__element loading__element__small"></span>
+      </div>
+      <div class="account__info flex__items">
+        <b>Following</b>
         <span class="loading__element loading__element__small"></span>
+      </div>
+      <div class="account__info flex__items">
+        <b>Followers</b>
+        <span class="loading__element loading__element__small"></span>
+      </div>
     </div>
-    <div class="account__info flex__items">
-      <b>Following</b>
-      <span class="loading__element loading__element__small"></span>
-    </div>
-    <div class="account__info flex__items">
-      <b>Followers</b>
-      <span class="loading__element loading__element__small"></span>
-    </div>
-  </div>
-</section>
+  </section>
 
-<div class="flex flex__align-center flex__center-content loading__timeline">
-  <%= image_tag "loading.gif", class: "loading__gif"%>
-  <h2 class="loading__text">LOADING...</h2>
+  <div class="flex flex__align-center flex__center-content loading__timeline">
+    <%= image_tag "loading.gif", class: "loading__gif"%>
+    <h2 class="loading__text">LOADING...</h2>
+  </div>
 </div>

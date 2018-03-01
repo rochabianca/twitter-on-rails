@@ -10,25 +10,19 @@
 </section>
 
 <div class="grid space__menu">
-  <section class="grid__column grid__column--6 timeline timeline__margin timeline__scroll">
-    <%= render "home/timeline" %>
-  </section>
-
-  <section class="grid__column grid__column--4 timeline" id="mentions">
+  <%= render "home/timeline" %>
+  
+  <div class="removable grid grid__column grid__column--6">
     <%= render "/home/mentions" %>
-  </section>
-
-  <section class="grid__column grid__column--2 timeline" id="trending">
     <%= render "/home/trending" %>
-  </section>
+  </div>
 
   <section class="grid__column grid__column--6 essential__relative profile__card essential__display-none timeline__scroll animated" id="profile-card">
-    <div class="loading">
-      <%= render "/home/loading" %> 
-    </div>
+    <%= render "/home/loading" %>
     <div class="essential__display-none" id="profile_card-content">
     </div>
   </section>
 </div>
 
-<div class="profile__bg essential__display-none animated"></div>
+<div class="profile__bg essential__display-none animated">
+</div>

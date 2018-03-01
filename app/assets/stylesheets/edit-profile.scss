@@ -1,8 +1,9 @@
 @import 'variables';
 
 .edit-profile {
-  margin: 0 auto;
-
+  margin: 0 $minor;
+  padding-bottom: $medium;
+  background: $white;
   label {
     color: $black;
     font-size: $big;
@@ -12,10 +13,16 @@
   input {
     margin-bottom: $between;
     border: 1px solid $light-gray;
+    display: block;
+    width: 500px;
     &:focus {
       border-color: $primary;
     }
   }
+}
+
+.edit-profile__header {
+  position: initial !important;
 }
 
 .edit-profile__title {
@@ -25,11 +32,18 @@
   margin: $medium auto $major auto;
 }
 
+.edit-profile__section {
+  font-size: $small;
+  margin: $major 0 $micro 0;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
 .edit-profile__pic {
   position: absolute;
   left: 0;
   right: 0;
-  margin-top: -40px;
+  margin-top: -$medium;
   z-index: 8;
 }
 .edit-profile__center {
@@ -37,18 +51,15 @@
 }
 
 .edit-profile__footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   padding: $minor;
-  a {
-    cursor: pointer;
-    color: $gray;
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
+  border-top: 1px solid $light-gray;
+  h4 {
+    margin: 0px;
+    color: $black;
+    font-weight: bold;
   }
+}
+
+.edit-profile__button {
+  width: auto !important;
 }
