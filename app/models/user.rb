@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  after_create :initial_setup
+  before_create :initial_setup
+  include PgSearch
   has_many :tweets
   has_many :followers_links, class_name: 'Follow', source: :follower
   has_many :following_links, class_name: 'Follow', source: :user
@@ -17,7 +18,8 @@ class User < ApplicationRecord
 
   # Only allow letter, number, underscore and punctuation.
   validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, multiline: true
-  validate :validate_username    
+  validate :validate_username
+   
 
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup
@@ -39,10 +41,7 @@ class User < ApplicationRecord
   end
 
   def initial_setup 
-    self.name = self.username;
-    Follow.create!(
-        user_id: self.id,
-        follower_id: self.id
-      )
+    self.name = username
+    self.followers = [self]
   end
 end

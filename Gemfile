@@ -62,3 +62,4 @@ gem 'faker'
 gem 'rubocop', require: false
 gem 'kaminari'
 gem 'rails_autolink'
+gem 'pg_search'

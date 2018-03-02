@@ -1,1 +1,1 @@
-$(document).on('ajax:beforeSend', '.profile__user',openModal);
+$(document).on('ajax:beforeSend', '.profile__user, .tweet__username-tag',openModal);
