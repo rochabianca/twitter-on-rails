@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  after_create :initial_setup
   has_many :tweets
   has_many :followers_links, class_name: 'Follow', source: :follower
   has_many :following_links, class_name: 'Follow', source: :user
@@ -35,5 +36,13 @@ class User < ApplicationRecord
     if User.where(email: username).exists?
       errors.add(:username, :invalid)
     end
+  end
+
+  def initial_setup 
+    self.name = self.username;
+    Follow.create!(
+        user_id: self.id,
+        follower_id: self.id
+      )
   end
 end

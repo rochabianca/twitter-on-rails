@@ -4,9 +4,9 @@
   </div>
 
   <%= image_tag @rand_profile, :class => "account__pic profile--pic" %>
-  <h1 class="account__text account__username"><%= @user.username %></h1>
+  <h1 class="account__text account__username"><%= @user.name %></h1>
   <h4 class="account__username-tag">@<%= @user.username %></h4>
-  <p class="account__text account__bio profile--bio"><%= Faker::TheFreshPrinceOfBelAir.quote %></p>
+  <p class="account__text account__bio profile--bio"><%= @user.bio %></p>
 
   <div class="flex flex__center-content">
     <div class="account__info flex__items">

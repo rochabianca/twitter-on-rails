@@ -13,7 +13,7 @@
   </div>
 
   <%= simple_form_for(Tweet.new, remote: true) do |f| %>
-    <%= f.input :content,as: :text, label: false, :error => false ,  placeholder: "What's happening?", input_html: {:rows => '5'},  autocomplete: "off"%>
+    <%= f.input :content,as: :text, label: false, :error => false ,  placeholder: "What's happening?", input_html: {:rows => '5'},  autocomplete: "off" %>
     <div class="space__minor-top flex flex__content-space-between flex__align-center">
       <div class="new-tweet__caracters">
         <span class="caracteres"></span>

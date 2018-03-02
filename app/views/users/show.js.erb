@@ -1,8 +1,5 @@
 openContent()
 $('#profile_card-content').html("<%= j render 'user' %>");
-
-$('.profile__loading').addClass('essential__display-none');
-
 $(document).on('click', '.quit, .profile__bg', closeModal);
 
 $("#timeline__profile .timeline--page").infiniteScroll({

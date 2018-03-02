@@ -4,9 +4,9 @@
 
 <div class="menu--profile">
   <%= image_tag @rand_profile, :class => "account__pic" %>
-  <h3 class="account__text account__name"><%= current_user.username %></h3>
+  <h3 class="account__text account__name"><%= current_user.name %></h3>
   <h4 class="account__text account__username">@<%= current_user.username %></h4>
-  <p class="account__text account__bio"><%= Faker::TheFreshPrinceOfBelAir.quote %></p>
+  <p class="account__text account__bio"><%= current_user.bio %></p>
 
   <section class="flex flex__center-content account__divider">
     <div class="account__info flex__items">
@@ -21,7 +21,7 @@
 
     <div class="account__info flex__items">
         <b>Followers</b>
-        <p><%= @followed_user.count %></p>
+        <p><%= @followed_user.count - 1 %></p>
     </div>
   </section>
 

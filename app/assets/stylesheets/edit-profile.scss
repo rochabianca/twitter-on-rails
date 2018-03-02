@@ -50,13 +50,9 @@
   margin: 0 auto;
 }
 
-.edit-profile__footer {
-  padding: $minor;
-  border-top: 1px solid $light-gray;
-  h4 {
+.edit-profile__danger-zone {
+  p {
     margin: 0px;
-    color: $black;
-    font-weight: bold;
   }
 }
 

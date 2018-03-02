@@ -4,9 +4,12 @@
 </section>
 
 <section class="edit-profile  space__major-top">
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-    <label>Email</label>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), remote: true , html: { method: :put }) do |f| %>
+    <h2 class="edit-profile__section">Account</h2>
+    <hr class="essential__line space__minor-bottom">
+    <%= f.text_field :name, autofocus: true, placeholder: "Name" %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.text_field :bio,as: :text, autofocus: true, placeholder: "Write a cool biography for people know who you are", input_html: {:rows => '3'}, :error => false,  autocomplete: "off" %>    
 
       <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
       <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
@@ -22,16 +25,20 @@
     <hr class="essential__line space__minor-bottom">
     <%= f.password_field :current_password, autocomplete: "off", placeholder: "Current password" %>
 
-    <div class="space__minor-top space__minor-bottom">
+    <div class="space__medium-top">
       <%= f.submit "Save Changes", class: "button button__block button__secundary button__square" %>
     </div>
   <% end %>
+
+   <section>
+      <%= flash_messages class: 'alert' %>
+   </section>
 
   <h2 class="edit-profile__section space__major-top">Cancel your account</h2>
   <hr class="essential__line space__minor-bottom">
   <div class="animated edit-profile__danger-zone flex flex__align-center flex__content-space-between">
     <p>Once you cancel your account, there is no coming back. Please be certain</p>
-    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "space__minor-top button  button__square button__danger edit-profile__button" %>
+    <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "button  button__square button__danger edit-profile__button" %>
   </div>
 
 </section>
