@@ -7,6 +7,10 @@ class HomeController < ApplicationController
     @follow_user = User.where(id: @following.pluck(:follower_id))
     @followed_user = Follow.all.where(follower_id: current_user.id)
   end
+
+  def search
+
+  end
   
   protected
   def load_widget_data

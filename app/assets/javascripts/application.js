@@ -23,4 +23,5 @@
 //= require tweet.js
 //= require devise-edit.js
 //= require edit-profile.js
+//= require search.js
 //= require_tree .

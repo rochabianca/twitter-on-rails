@@ -1,0 +1,5 @@
+console.log('chamou');
+
+openContent();
+$('#profile_card-content').html("<%= j render 'search' %>");
+$(document).on('click', '.quit, .profile__bg', closeModal);
